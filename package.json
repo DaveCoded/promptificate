@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public",
+    "start": "sirv public --single",
     "validate": "svelte-check"
   },
   "devDependencies": {
@@ -24,6 +24,7 @@
     "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
+    "page": "^1.11.6",
     "sirv-cli": "^1.0.0"
   }
 }
