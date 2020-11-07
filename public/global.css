@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&display=swap');
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -5,11 +7,29 @@ html, body {
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
+	background: #FCFBF7;
+	color: rgb(48, 53, 89);
+	padding: 2em;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Typography */
+
+h1 {
+	font-size: 3.375rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
 }
 
 a {
@@ -24,6 +44,8 @@ a:hover {
 a:visited {
 	color: rgb(0,80,160);
 }
+
+/* Forms */
 
 label {
 	display: block;
@@ -44,6 +66,8 @@ input:disabled {
 	color: #ccc;
 }
 
+/* Buttons and Nav */
+
 button {
 	color: #333;
 	background-color: #f4f4f4;
@@ -62,6 +86,12 @@ button:focus {
 	border-color: #666;
 }
 
-nav a {
-    display: block;
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 1em;
+	border-bottom: 1px solid rgb(199, 202, 216);
 }
+
+
