@@ -50,7 +50,7 @@
     }
 </script>
 
-<nav><a href="/develop">Web dev prompts</a> <a href="/about">About</a></nav>
+<nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
 <h1>Draw this</h1>
 
 <h2>Categories</h2>
