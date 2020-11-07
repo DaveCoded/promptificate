@@ -2,8 +2,8 @@
 </script>
 
 <nav>
-    <a href="/">Drawing prompts</a>
-    <a href="/dev">Web dev prompts</a>
+    <a href="/draw">Drawing prompts</a>
+    <a href="/develop">Web dev prompts</a>
     <a href="/about">About</a>
 </nav>
-<h1>PAGE NOT FOUND</h1>
+<h1>Sad, it's a 404</h1>

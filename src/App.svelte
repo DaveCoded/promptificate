@@ -1,15 +1,15 @@
 <script lang="ts">
     import router from 'page'
 
-    import Drawing from './pages/Drawing.svelte'
-    import Dev from './pages/Dev.svelte'
+    import Draw from './pages/Draw.svelte'
+    import Develop from './pages/Develop.svelte'
     import About from './pages/About.svelte'
     import NotFound from './pages/NotFound.svelte'
 
     let page
 
-    router('/', () => (page = Drawing))
-    router('/dev', () => (page = Dev))
+    router('/draw', () => (page = Draw))
+    router('/develop', () => (page = Develop))
     router('/about', () => (page = About))
     router('/*', () => (page = NotFound))
 

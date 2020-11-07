@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Category } from '../pages/Drawing.svelte'
+    import type { Category } from '../pages/Draw.svelte'
 
     export let label: string
     export let boundOption: string = ''
