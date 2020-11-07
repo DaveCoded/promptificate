@@ -2,7 +2,7 @@
 </script>
 
 <nav>
-    <a href="/drawing">Drawing prompts</a>
+    <a href="/">Drawing prompts</a>
     <a href="/dev">Web dev prompts</a>
     <a href="/about">About</a>
 </nav>
