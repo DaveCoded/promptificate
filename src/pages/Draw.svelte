@@ -51,27 +51,28 @@
 </script>
 
 <nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
+
+
 <h1>Draw this</h1>
 
 <h2>Categories</h2>
 
 <!-- {categories} is the same as saying categories={categories} -->
+
+<div class="generator-container">
+
 <CategorySelect label="firstOption" bind:boundOption={firstOption} {categories} />
+
+{#if isReady}<h4 transition:fade>{firstPrompt}</h4>{/if}
+
 <CategorySelect label="secondOption" bind:boundOption={secondOption} {categories} />
+
+{#if isReady}<h4 transition:fade>{secondPrompt}</h4>{/if}
+
 <CategorySelect label="thirdOption" bind:boundOption={thirdOption} {categories} />
 
-<p>First: {firstOption}</p>
-<p>Second: {secondOption}</p>
-<p>Third: {thirdOption}</p>
+{#if isReady}<h4 transition:fade>{thirdPrompt}</h4>{/if}
 
-<button on:click={generate}>GO</button>
+<button on:click={generate}>Generate!</button>
 
-<h3>Prompts</h3>
-
-{#if isReady}
-    <div transition:fade>
-        <h4>{firstPrompt}</h4>
-        <h4>{secondPrompt}</h4>
-        <h4>{thirdPrompt}</h4>
-    </div>
-{/if}
+</div>
