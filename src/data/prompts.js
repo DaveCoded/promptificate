@@ -1,6 +1,6 @@
 export let prompts = {
     visualStyle: ['Punk rock', 'Bauhaus', '1960s Psychadelics', '1920s Fighter pilot'],
-    principal: [
+    principle: [
         'Value',
         'Negative space',
         'Colour',

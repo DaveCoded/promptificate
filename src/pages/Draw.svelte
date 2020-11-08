@@ -23,7 +23,7 @@
 
     let categories = [
         { value: 'visualStyle', text: 'Visual style' },
-        { value: 'principal', text: 'Principal' },
+        { value: 'principle', text: 'Principle' },
         { value: 'object', text: 'Object' },
         { value: 'mood', text: 'Mood' },
         { value: 'abstractConcept', text: 'Abstract concept' }
