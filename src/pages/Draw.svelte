@@ -10,6 +10,7 @@
     import CategorySelect from '../components/CategorySelect.svelte'
     import { fade } from 'svelte/transition'
     import { prompts } from '../data/prompts'
+    import Timer from '../components/Timer.svelte'
 
     let isReady: boolean = false
 
@@ -76,3 +77,5 @@
 <button on:click={generate}>Generate!</button>
 
 </div>
+
+<Timer />
