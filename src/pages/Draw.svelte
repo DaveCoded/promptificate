@@ -8,7 +8,8 @@
 
 <script lang="ts">
     import CategorySelect from '../components/CategorySelect.svelte'
-    import { fade } from 'svelte/transition'
+    import PromptResult from '../components/PromptResult.svelte'
+
     import { prompts } from '../data/prompts'
     import Timer from '../components/Timer.svelte'
 
@@ -53,29 +54,20 @@
 
 <nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
 
-
 <h1>Draw this</h1>
-
 <h2>Categories</h2>
 
-<!-- {categories} is the same as saying categories={categories} -->
-
 <div class="generator-container">
+    <CategorySelect label="firstOption" bind:boundOption={firstOption} {categories} />
+    <PromptResult {isReady} prompt={firstPrompt} />
 
-<CategorySelect label="firstOption" bind:boundOption={firstOption} {categories} />
+    <CategorySelect label="secondOption" bind:boundOption={secondOption} {categories} />
+    <PromptResult {isReady} prompt={secondPrompt} />
 
-{#if isReady}<h4 transition:fade>{firstPrompt}</h4>{/if}
+    <CategorySelect label="thirdOption" bind:boundOption={thirdOption} {categories} />
+    <PromptResult {isReady} prompt={thirdPrompt} />
 
-<CategorySelect label="secondOption" bind:boundOption={secondOption} {categories} />
-
-{#if isReady}<h4 transition:fade>{secondPrompt}</h4>{/if}
-
-<CategorySelect label="thirdOption" bind:boundOption={thirdOption} {categories} />
-
-{#if isReady}<h4 transition:fade>{thirdPrompt}</h4>{/if}
-
-<button on:click={generate}>Generate!</button>
-
+    <button on:click={generate}>Generate!</button>
 </div>
 
 <Timer />
