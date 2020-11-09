@@ -4,40 +4,17 @@
         value: string
         text: string
     }
-
-    export interface Prompt {
-        value: string
-        isLocked: boolean
-    }
 </script>
 
 <script lang="ts">
+    import { promptsData } from '../data/prompts'
+    import { getRandomInt } from '../helpers/mathsHelpers'
+
     import CategorySelect from '../components/CategorySelect.svelte'
     import PromptResult from '../components/PromptResult.svelte'
-
-    import { promptsData } from '../data/prompts'
     import Timer from '../components/Timer.svelte'
 
-    let isReady: boolean = false
-
-    let firstOption: string
-    let secondOption: string
-    let thirdOption: string
-
-    let firstPrompt: Prompt = {
-        value: '',
-        isLocked: false
-    }
-    let secondPrompt: Prompt = {
-        value: '',
-        isLocked: false
-    }
-    let thirdPrompt: Prompt = {
-        value: '',
-        isLocked: false
-    }
-
-    let categories = [
+    const categoryOptions = [
         { value: 'visualStyle', text: 'Visual style' },
         { value: 'principle', text: 'Principle' },
         { value: 'object', text: 'Object' },
@@ -45,29 +22,34 @@
         { value: 'abstractConcept', text: 'Abstract concept' }
     ]
 
-    function generate() {
-        function getRandomInt(min: number, max: number): number {
-            min = Math.ceil(min)
-            max = Math.floor(max)
-            return Math.floor(Math.random() * (max - min) + min)
+    let promptsArray = [
+        {
+            category: '',
+            result: '',
+            isLocked: false
+        },
+        {
+            category: '',
+            result: '',
+            isLocked: false
         }
+    ]
 
-        const firstIndex = getRandomInt(0, promptsData[firstOption].length)
-        const secondIndex = getRandomInt(0, promptsData[secondOption].length)
-        const thirdIndex = getRandomInt(0, promptsData[thirdOption].length)
+    let isReady = false
 
-        if (!firstPrompt.isLocked) {
-            firstPrompt.value = promptsData[firstOption][firstIndex]
-        }
-        if (!secondPrompt.isLocked) {
-            secondPrompt.value = promptsData[secondOption][secondIndex]
-        }
-        if (!thirdPrompt.isLocked) {
-            thirdPrompt.value = promptsData[thirdOption][thirdIndex]
-        }
-
+    const generate = () => {
+        promptsArray = promptsArray.map(prompt => {
+            let index = getRandomInt(0, promptsData[prompt.category].length)
+            return {
+                ...prompt,
+                result: prompt.isLocked ? prompt.result : promptsData[prompt.category][index]
+            }
+        })
         isReady = true
     }
+
+    const addPrompt = () =>
+        (promptsArray = [...promptsArray, { category: '', result: '', isLocked: false }])
 </script>
 
 <nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
@@ -76,16 +58,20 @@
 <h2>Categories</h2>
 
 <div class="generator-container">
-    <CategorySelect label="firstOption" bind:boundOption={firstOption} {categories} />
-    <PromptResult {isReady} prompt={firstPrompt} />
-
-    <CategorySelect label="secondOption" bind:boundOption={secondOption} {categories} />
-    <PromptResult {isReady} prompt={secondPrompt} />
-
-    <CategorySelect label="thirdOption" bind:boundOption={thirdOption} {categories} />
-    <PromptResult {isReady} prompt={thirdPrompt} />
+    {#each promptsArray as prompt, i}
+        <CategorySelect
+            label={prompt + String(i)}
+            bind:boundOption={prompt.category}
+            {categoryOptions} />
+        <PromptResult
+            prompt={prompt.result}
+            lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
+            {isReady}
+            isLocked={prompt.isLocked} />
+    {/each}
 
     <button on:click={generate}>Generate!</button>
+    <button on:click={addPrompt}>Add a prompt</button>
 </div>
 
 <Timer />
