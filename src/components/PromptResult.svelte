@@ -1,13 +1,10 @@
 <script lang="ts">
     import { fade } from 'svelte/transition'
-    import type { Prompt } from '../pages/Draw.svelte'
 
+    export let prompt: string
+    export let isLocked: boolean
     export let isReady: boolean
-    export let prompt: Prompt
-
-    function togglePromptLock(): void {
-        prompt.isLocked = !prompt.isLocked
-    }
+    export let lockPrompt: () => void
 </script>
 
 <style>
@@ -30,9 +27,9 @@
 {#if isReady}
     <div transition:fade>
         <h4 class="prompt">
-            {prompt.value}
-            <button on:click={togglePromptLock} class="prompt-lock">
-                {#if prompt.isLocked}Unlock{:else}Lock me{/if}
+            {prompt}
+            <button on:click={lockPrompt} class="prompt-lock">
+                {#if isLocked}Unlock{:else}Lock me{/if}
             </button>
         </h4>
     </div>

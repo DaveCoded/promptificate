@@ -6,7 +6,7 @@
     import About from './pages/About.svelte'
     import NotFound from './pages/NotFound.svelte'
 
-    let page
+    let page: any
 
     router('/draw', () => (page = Draw))
     router('/develop', () => (page = Develop))
