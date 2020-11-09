@@ -1,4 +1,4 @@
-export let prompts = {
+export let promptsData = {
     visualStyle: ['Punk rock', 'Bauhaus', '1960s Psychadelics', '1920s Fighter pilot'],
     principle: [
         'Value',

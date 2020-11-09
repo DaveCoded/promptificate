@@ -4,13 +4,18 @@
         value: string
         text: string
     }
+
+    export interface Prompt {
+        value: string
+        isLocked: boolean
+    }
 </script>
 
 <script lang="ts">
     import CategorySelect from '../components/CategorySelect.svelte'
     import PromptResult from '../components/PromptResult.svelte'
 
-    import { prompts } from '../data/prompts'
+    import { promptsData } from '../data/prompts'
     import Timer from '../components/Timer.svelte'
 
     let isReady: boolean = false
@@ -19,9 +24,18 @@
     let secondOption: string
     let thirdOption: string
 
-    let firstPrompt: string
-    let secondPrompt: string
-    let thirdPrompt: string
+    let firstPrompt: Prompt = {
+        value: '',
+        isLocked: false
+    }
+    let secondPrompt: Prompt = {
+        value: '',
+        isLocked: false
+    }
+    let thirdPrompt: Prompt = {
+        value: '',
+        isLocked: false
+    }
 
     let categories = [
         { value: 'visualStyle', text: 'Visual style' },
@@ -32,21 +46,25 @@
     ]
 
     function generate() {
-        // Random number in range: 0 - array.length
         function getRandomInt(min: number, max: number): number {
             min = Math.ceil(min)
             max = Math.floor(max)
             return Math.floor(Math.random() * (max - min) + min)
         }
 
-        console.log(prompts[firstOption])
-        const firstIndex = getRandomInt(0, prompts[firstOption].length)
-        const secondIndex = getRandomInt(0, prompts[secondOption].length)
-        const thirdIndex = getRandomInt(0, prompts[thirdOption].length)
+        const firstIndex = getRandomInt(0, promptsData[firstOption].length)
+        const secondIndex = getRandomInt(0, promptsData[secondOption].length)
+        const thirdIndex = getRandomInt(0, promptsData[thirdOption].length)
 
-        firstPrompt = prompts[firstOption][firstIndex]
-        secondPrompt = prompts[secondOption][secondIndex]
-        thirdPrompt = prompts[thirdOption][thirdIndex]
+        if (!firstPrompt.isLocked) {
+            firstPrompt.value = promptsData[firstOption][firstIndex]
+        }
+        if (!secondPrompt.isLocked) {
+            secondPrompt.value = promptsData[secondOption][secondIndex]
+        }
+        if (!thirdPrompt.isLocked) {
+            thirdPrompt.value = promptsData[thirdOption][thirdIndex]
+        }
 
         isReady = true
     }
