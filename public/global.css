@@ -80,6 +80,7 @@ button {
 	border-radius: 4px;
 	padding: 0.8em 1em;
 	margin: 1em auto;
+	cursor: pointer;
 }
 
 button:disabled {
