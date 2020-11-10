@@ -50,6 +50,9 @@
 
     const addPrompt = () =>
         (promptsArray = [...promptsArray, { category: '', result: '', isLocked: false }])
+
+    const deletePrompt = (index: number) =>
+        (promptsArray = promptsArray.filter((_p, i) => i !== index))
 </script>
 
 <nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
@@ -66,6 +69,7 @@
         <PromptResult
             prompt={prompt.result}
             lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
+            deletePrompt={() => deletePrompt(i)}
             {isReady}
             isLocked={prompt.isLocked} />
     {/each}

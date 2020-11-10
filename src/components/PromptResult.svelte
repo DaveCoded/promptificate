@@ -5,6 +5,7 @@
     export let isLocked: boolean
     export let isReady: boolean
     export let lockPrompt: () => void
+    export let deletePrompt: () => void
 </script>
 
 <style>
@@ -12,15 +13,23 @@
         position: relative;
     }
 
-    .prompt-lock {
-        position: absolute;
-        color: #333;
-        background-color: #ddd;
+    .secondary-button {
         margin: 0;
         padding: 0.2em 0.4em;
         font-size: 0.6em;
-        left: 5em;
-        top: 0.4em;
+    }
+
+    .prompt-lock {
+        color: #333;
+        background-color: #ddd;
+    }
+
+    .delete-button {
+        background-color: #ff3333;
+    }
+
+    .delete-button:disabled {
+        background-color: #ccc;
     }
 </style>
 
@@ -28,9 +37,13 @@
     <div transition:fade>
         <h4 class="prompt">
             {prompt}
-            <button on:click={lockPrompt} class="prompt-lock">
+            <button on:click={lockPrompt} class="secondary-button prompt-lock">
                 {#if isLocked}Unlock{:else}Lock me{/if}
             </button>
+            <button
+                on:click={deletePrompt}
+                disabled={isLocked}
+                class="secondary-button delete-button">Delete</button>
         </h4>
     </div>
 {/if}
