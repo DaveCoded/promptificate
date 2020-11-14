@@ -1,4 +1,17 @@
-export let promptsData = {
+// This helps TypeScript understand that the data can be indexed with a string
+interface PromptKeys {
+    [key: string]: string[];
+}
+
+interface PromptsData extends PromptKeys {
+    visualStyle: string[],
+    principle: string[],
+    object: string[],
+    mood: string[],
+    abstractConcept: string[]
+}
+
+export let promptsData: PromptsData = {
     visualStyle: ['Punk rock', 'Bauhaus', '1960s Psychadelics', '1920s Fighter pilot'],
     principle: [
         'Value',

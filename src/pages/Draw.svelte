@@ -41,10 +41,11 @@
 
     const generate = () => {
         promptsArray = promptsArray.map(prompt => {
-            let index = getRandomInt(0, promptsData[prompt.category].length)
+            const dataCategory = promptsData[prompt.category]
+            let index = getRandomInt(0, dataCategory.length)
             return {
                 ...prompt,
-                result: prompt.isLocked ? prompt.result : promptsData[prompt.category][index]
+                result: prompt.isLocked ? prompt.result : dataCategory[index]
             }
         })
         isReady = true
