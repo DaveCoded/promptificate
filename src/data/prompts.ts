@@ -5,7 +5,7 @@ interface PromptKeys {
 
 interface PromptsData extends PromptKeys {
     visualStyle: string[],
-    principle: string[],
+    designPrinciple: string[],
     object: string[],
     mood: string[],
     abstractConcept: string[]
@@ -13,7 +13,7 @@ interface PromptsData extends PromptKeys {
 
 export let promptsData: PromptsData = {
     visualStyle: ['Punk rock', 'Bauhaus', '1960s Psychadelics', '1920s Fighter pilot'],
-    principle: [
+    designPrinciple: [
         'Value',
         'Negative space',
         'Colour',

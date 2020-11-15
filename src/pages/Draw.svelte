@@ -16,11 +16,11 @@
     import Timer from '../components/Timer.svelte'
 
     const categoryOptions = [
-        { value: 'visualStyle', text: 'Visual style' },
-        { value: 'principle', text: 'Principle' },
+        { value: 'visualStyle', text: 'Visual Style' },
+        { value: 'designPrinciple', text: 'Design Principle' },
         { value: 'object', text: 'Object' },
         { value: 'mood', text: 'Mood' },
-        { value: 'abstractConcept', text: 'Abstract concept' }
+        { value: 'abstractConcept', text: 'Abstract Concept' }
     ]
 
     let promptsArray = [
