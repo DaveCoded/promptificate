@@ -172,3 +172,8 @@ select {
 	border-radius: 6px;
 	box-shadow: -6px -6px 12px rgb(255, 255, 255), 3px 3px 20px rgba(63, 63, 79, 0.01), 6px 6px 24px rgba(0, 6, 30, .09);
 }
+
+select:focus {
+	box-shadow: -6px -6px 12px rgb(255, 255, 255), 1px 1px 12px rgba(63, 63, 79, 0.05), 3px 3px 18px rgba(0, 6, 30, .1);
+	outline-color: #3ea5ff;
+}
