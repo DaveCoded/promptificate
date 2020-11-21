@@ -15,6 +15,7 @@
 <style>
     .prompt {
         position: relative;
+        padding-left: 22px;
     }
 
     .padlock-button {

@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lato:wght@400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 html, body {
 	position: relative;
@@ -9,21 +13,24 @@ html, body {
 
 body {
 	text-align: center;
-	background: #FCFBF7;
+	background: #F6F6F5;
 	color: rgb(48, 53, 89);
 	padding: 2em;
 	box-sizing: border-box;
-	font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* Typography */
 
 h1 {
-	font-size: 3.375rem;
+	font-size: 3.8rem;
+	font-family: 'DM Serif Text';
+	letter-spacing: 0.02em;
 }
 
 h2 {
-	font-size: 2.25rem;
+	font-size: 2rem;
+	font-weight: 100;
 }
 
 h3 {
@@ -71,36 +78,39 @@ input:disabled {
 
 /* Buttons and Nav */
 
-button {
+.button {
 	color: rgb(247, 247, 243);
-	background-color: #5f29de;
+	background-color: #22222B;
 	font-weight: 200;
 	font-size: 1.1em;
 	border: none;
 	border-radius: 4px;
-	padding: 0.8em 1em;
+	padding: 0.6em 1em;
 	margin: 1em auto;
 	cursor: pointer;
 }
 
-button:disabled {
+.button:disabled {
 	color: #999;
 }
 
-button:not(:disabled):active {
+.button:not(:disabled):active {
 	background-color: #ddd;
 }
 
-button:focus {
+.button:focus {
 	border-color: #666;
 }
 
 nav {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: left;
 	padding-bottom: 1em;
-	border-bottom: 1px solid rgb(199, 202, 216);
+}
+
+nav a {
+	padding: 0 12px;
 }
 
 .generator-container{
@@ -109,4 +119,23 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+}
+
+.prompt-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* Select boxes */
+
+select {
+	width: 200px;
+	padding: 16px;
+	border: 1px solid rgb(222, 227, 233);
+	border-radius: 6px;
+	box-shadow: -6px -6px 24px rgba(255, 255, 255, .8), 6px 6px 24px rgba(0, 6, 30, .1);
 }
