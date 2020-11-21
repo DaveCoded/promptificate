@@ -163,11 +163,6 @@ nav a {
 	display: block;
 	position: relative;
 }
-
-.addPrompt svg circle {
-	fill: white;
-}
-
 /* Select boxes */
 
 select {
