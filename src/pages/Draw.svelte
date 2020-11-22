@@ -107,7 +107,7 @@
   </button>
 </div>
 
-  <button class="button" on:click={generate}>Generate!</button>
+  <button class="button" on:click={generate}>Prompt Me!</button>
 </div>
 
 <!-- <Timer /> -->

@@ -2,4 +2,4 @@
 </script>
 
 <nav><a href="/draw">Draw</a> <a href="/about">About</a></nav>
-<h1>Develop this</h1>
+<h1>Build this</h1>
