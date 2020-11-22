@@ -97,7 +97,7 @@ button {
 	box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
     0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
 	0 25px 20px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s;
+	transition: all 0.3s ease-in-out;
 }
 
 .button:disabled {
@@ -109,7 +109,6 @@ button {
 }
 
 .button:hover {
-	border-color: #666;
 	transform: scale(0.98);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08),
