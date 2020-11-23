@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-  import { promptsData } from "../data/prompts";
+  import { drawPromptsData } from "../data/drawPrompts";
   import { getRandomInt } from "../helpers/mathsHelpers";
   import type { Mode } from "../types/mode.type";
 
@@ -41,7 +41,7 @@
 
   const generate = () => {
     promptsArray = promptsArray.map((prompt) => {
-      const dataCategory = promptsData[prompt.category];
+      const dataCategory = drawPromptsData[prompt.category];
       let index = getRandomInt(0, dataCategory.length);
       return {
         ...prompt,
