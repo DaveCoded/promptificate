@@ -1,0 +1,9 @@
+{
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "editor.formatOnSave": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.detectIndentation": false
+}
