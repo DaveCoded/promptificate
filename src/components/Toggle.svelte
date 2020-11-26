@@ -1,26 +1,35 @@
 <style>
-.toggleContainer {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
-}
+    .container{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        padding: 0px 4px;
+        margin: 1em auto;
+        border-radius: 30px;
+        border: 1px solid #f1eff4;
+        background: linear-gradient(180deg, #F5F4F6, #fcfbfc);
+    }
 
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
-  }
-  input[type="checkbox"]:focus {
-    outline: 0;
-  }
+    button {
+        padding: 0.8em 1em;
+        border-radius: 30px;
+        transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+    }
 
-  .toggle {
+    button:focus {
+        outline: none;
+    }
+
+    .active {
+        color: white;
+        background: linear-gradient(0deg, #2e58f0, #3195ff);
+        border: 1px solid #2c79ec;
+    }
+
+    .toggle {
     height: 32px;
     width: 52px;
-    border-radius: 16px;
+    
     display: inline-block;
     position: relative;
     margin: 0 auto;
@@ -28,35 +37,15 @@
     background: linear-gradient(30deg, #3d67ff, #238dff);
     transition: all 0.2s ease;
   }
-  .toggle:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
-    transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
-  }
-  .toggle:checked {
-    border-color: #3590ff;
-    background: linear-gradient(160deg, #F1F4FF, #F9FAFF);
-  }
-  .toggle:checked:after {
-    transform: translatex(20px);
-    background: linear-gradient(30deg, #3d67ff, #238dff);;
-  }
 
-  label {
-      padding: 0 12px;
-      margin-top: 5px;
-  }
 </style>
 
-<div class="toggleContainer">
-    <label for="modeToggle">Classic</label>
-    <input type="checkbox" id="modeToggle" class="toggle" />
-    <label for="modeToggle">Freestyle</label>
+<script>
+    let currentMode = 'classic'
+</script>
+
+<div class='container'>
+    <button class="{currentMode === 'classic' ? 'active' : ''}" on:click="{() => currentMode = 'classic'}">Classic</button>
+    
+    <button class="{currentMode === 'freestyle' ? 'active' : ''}" on:click="{() => currentMode = 'freestyle'}">Freestyle</button>
 </div>

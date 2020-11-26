@@ -63,15 +63,6 @@
   const switchMode = (newMode: Mode) => (mode = newMode);
 </script>
 
-<style>
-  .toggleButton {
-    border-radius: 20px;
-  }
-  .active-mode {
-    background-color: #5e5e85;
-  }
-</style>
-
 <nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
 
 <h1>Draw this</h1>
