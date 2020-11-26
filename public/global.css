@@ -80,7 +80,8 @@ input:disabled {
 
 button {
 	border: none;
-	background: none;
+    background: none;
+    cursor: pointer;
 }
 
 .button {

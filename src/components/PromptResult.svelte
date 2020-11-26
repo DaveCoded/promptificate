@@ -20,6 +20,8 @@
 
     .padlock-button {
         background-color: transparent;
+        padding: 0;
+        margin: 0 1em;
     }
 
     .secondary-button {
