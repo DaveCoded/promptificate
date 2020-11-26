@@ -41,11 +41,13 @@
 </style>
 
 <script>
-    let currentMode = 'classic'
+    let currentMode = 'pleb'
 </script>
 
 <div class='container'>
-    <button class="{currentMode === 'classic' ? 'active' : ''}" on:click="{() => currentMode = 'classic'}">Classic</button>
+    <button class="{currentMode === 'pleb' ? 'active' : ''}" on:click="{() => currentMode = 'pleb'}">Pleb</button>
     
-    <button class="{currentMode === 'freestyle' ? 'active' : ''}" on:click="{() => currentMode = 'freestyle'}">Freestyle</button>
+    <button class="{currentMode === 'elite' ? 'active' : ''}" on:click="{() => currentMode = 'elite'}">Elite</button>
+
+    <button class="{currentMode === 'anarchist' ? 'active' : ''}" on:click="{() => currentMode = 'anarchist'}">Anarchist</button>
 </div>
