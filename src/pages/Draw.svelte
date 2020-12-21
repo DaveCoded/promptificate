@@ -68,8 +68,12 @@
 <h1>Draw this</h1>
 
 <div class="generator-container">
+  
   <Toggle />
 
+  <!-- If mode = classic, render <Classic /> component -->
+  <!-- If mode = advanced, render <Advanced /> component -->
+  <!-- If mode = freestyle, render <Freestyle /> component -->
   
     {#each promptsArray as prompt, i}
     <div class="prompt-container">
