@@ -1,1 +1,1 @@
-export type Mode = 'classic' | 'freestyle'
+export type Mode = 'classic' | 'advanced' | 'freestyle'

@@ -1,5 +1,10 @@
+<script>
+    export let currentMode = "classic";
+    export let switchMode;
+</script>
+
 <style>
-    .container{
+    .container {
         display: flex;
         justify-content: center;
         max-width: 100%;
@@ -7,7 +12,7 @@
         margin: 1em auto;
         border-radius: 30px;
         border: 1px solid #f1eff4;
-        background: linear-gradient(180deg, #F5F4F6, #fcfbfc);
+        background: linear-gradient(180deg, #f5f4f6, #fcfbfc);
     }
 
     button {
@@ -27,27 +32,28 @@
     }
 
     .toggle {
-    height: 32px;
-    width: 52px;
-    
-    display: inline-block;
-    position: relative;
-    margin: 0 auto;
-    border: 1px solid #d8eaff;
-    background: linear-gradient(30deg, #3d67ff, #238dff);
-    transition: all 0.2s ease;
-  }
+        height: 32px;
+        width: 52px;
 
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
+        border: 1px solid #d8eaff;
+        background: linear-gradient(30deg, #3d67ff, #238dff);
+        transition: all 0.2s ease;
+    }
 </style>
 
-<script>
-    let currentMode = 'pleb'
-</script>
+<div class="container">
+    <button
+        class={currentMode === 'classic' ? 'active' : ''}
+        on:click={() => switchMode('classic')}>Classic</button>
 
-<div class='container'>
-    <button class="{currentMode === 'pleb' ? 'active' : ''}" on:click="{() => currentMode = 'pleb'}">Pleb</button>
-    
-    <button class="{currentMode === 'elite' ? 'active' : ''}" on:click="{() => currentMode = 'elite'}">Elite</button>
+    <button
+        class={currentMode === 'advanced' ? 'active' : ''}
+        on:click={() => switchMode('advanced')}>Advanced</button>
 
-    <button class="{currentMode === 'anarchist' ? 'active' : ''}" on:click="{() => currentMode = 'anarchist'}">Anarchist</button>
+    <button
+        class={currentMode === 'freestyle' ? 'active' : ''}
+        on:click={() => switchMode('freestyle')}>Freestyle</button>
 </div>
