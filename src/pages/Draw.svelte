@@ -45,18 +45,27 @@
 
     let isReady = false;
     let mode: Mode = "classic";
+    let generate: () => void;
 
-    const generate = () => {
-        promptsArray = promptsArray.map((prompt) => {
-            const dataCategory = drawPromptsData[prompt.category];
-            let index = getRandomInt(0, dataCategory.length);
-            return {
-                ...prompt,
-                result: prompt.isLocked ? prompt.result : dataCategory[index],
-            };
-        });
-        isReady = true;
-    };
+    $: if (mode === "freestyle") {
+        generate = () => {
+            promptsArray = promptsArray.map((prompt) => {
+                const dataCategory = drawPromptsData[prompt.category];
+                let index = getRandomInt(0, dataCategory.length);
+                return {
+                    ...prompt,
+                    result: prompt.isLocked
+                        ? prompt.result
+                        : dataCategory[index],
+                };
+            });
+            isReady = true;
+        };
+    } else if (mode === "classic") {
+        generate = () => console.log("CLASSIC");
+    } else {
+        generate = () => console.log("ADVANCED");
+    }
 
     const addPrompt = () =>
         (promptsArray = [
