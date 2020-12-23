@@ -1,8 +1,8 @@
 <script lang="ts">
     import CategorySelect from "../components/CategorySelect.svelte";
     import PromptResult from "../components/PromptResult.svelte";
-    import type { FreestylePrompt } from "../pages/Draw.svelte";
-    import type { Mode } from "../types/mode.type";
+    import type { FreestylePrompt } from "../types/types";
+    import type { Mode } from "../types/types";
 
     interface CategoryOption {
         value: string;

@@ -4,23 +4,23 @@
         value: string;
         text: string;
     }
-
-    export interface FreestylePrompt {
-        category: string;
-        result: string;
-        isLocked: boolean;
-    }
 </script>
 
 <script lang="ts">
-    import { drawPromptsData } from "../data/drawPrompts";
-    import { getRandomInt } from "../helpers/mathsHelpers";
-    import type { Mode } from "../types/mode.type";
+    import {
+        generateClassic,
+        generateAdvanced,
+        generateFreestyle,
+    } from "../helpers/generateFunctions";
+    import type { Mode, FreestylePrompt, FixedPrompt } from "../types/types";
 
     import Toggle from "../components/Toggle.svelte";
     import Classic from "../components/Classic.svelte";
     import Advanced from "../components/Advanced.svelte";
     import Freestyle from "../components/Freestyle.svelte";
+
+    let classicResults: FixedPrompt[];
+    let advancedResults: FixedPrompt[];
 
     let promptsArray: FreestylePrompt[] = [
         {
@@ -47,24 +47,15 @@
     let mode: Mode = "classic";
     let generate: () => void;
 
-    $: if (mode === "freestyle") {
+    $: if (mode === "classic") {
+        generate = () => (classicResults = generateClassic());
+    } else if (mode === "advanced") {
+        generate = () => (advancedResults = generateAdvanced());
+    } else {
         generate = () => {
-            promptsArray = promptsArray.map((prompt) => {
-                const dataCategory = drawPromptsData[prompt.category];
-                let index = getRandomInt(0, dataCategory.length);
-                return {
-                    ...prompt,
-                    result: prompt.isLocked
-                        ? prompt.result
-                        : dataCategory[index],
-                };
-            });
+            promptsArray = generateFreestyle(promptsArray);
             isReady = true;
         };
-    } else if (mode === "classic") {
-        generate = () => console.log("CLASSIC");
-    } else {
-        generate = () => console.log("ADVANCED");
     }
 
     const addPrompt = () =>
@@ -87,9 +78,9 @@
     <Toggle currentMode={mode} {switchMode} />
 
     {#if mode === 'classic'}
-        <Classic />
+        <Classic {classicResults} />
     {:else if mode === 'advanced'}
-        <Advanced />
+        <Advanced {advancedResults} />
     {:else}
         <Freestyle
             {promptsArray}
