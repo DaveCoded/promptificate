@@ -1,15 +1,15 @@
 <script lang="ts">
-    import { fade } from 'svelte/transition'
-    import type { Mode } from '../types/mode.type'
+    import { fade } from "svelte/transition";
+    import type { Mode } from "../types/types";
 
-    import Padlock from '../components/Padlock.svelte'
+    import Padlock from "../components/Padlock.svelte";
 
-    export let prompt: string
-    export let isLocked: boolean
-    export let isReady: boolean
-    export let lockPrompt: () => void
-    export let deletePrompt: () => void
-    export let mode: Mode
+    export let prompt: string;
+    export let isLocked: boolean;
+    export let isReady: boolean;
+    export let lockPrompt: () => void;
+    export let deletePrompt: () => void;
+    export let mode: Mode;
 </script>
 
 <style>
