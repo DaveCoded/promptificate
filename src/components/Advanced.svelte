@@ -10,7 +10,5 @@
 {#if !prompts}
     <p>Click the button to prompt up yo' life</p>
 {:else}
-    <p>Draw {object}</p>
-    <p>to illustrate {concept}</p>
-    <p>in the style of {style}</p>
+    <p>Draw {object} to illustrate {concept} in the style of {style}</p>
 {/if}

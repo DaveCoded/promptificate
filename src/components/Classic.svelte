@@ -7,8 +7,7 @@
 </script>
 
 {#if !prompts}
-    <p>Click the button to prompt up yo' life</p>
+    <p>Ummm...click the button, maybe?</p>
 {:else}
-    <p>Draw {object}</p>
-    <p>to illustrate {concept}</p>
+    <p>Draw {object} to illustrate {concept}</p>
 {/if}
