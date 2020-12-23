@@ -1,8 +1,14 @@
 <script lang="ts">
     import type { FixedPrompt } from "../types/types";
-    export let classicResults: FixedPrompt[];
+    export let prompts: FixedPrompt[];
 
-    $: console.log({ classicResults });
+    $: object = prompts && prompts[0].result;
+    $: concept = prompts && prompts[1].result;
 </script>
 
-<p>Classic</p>
+{#if !prompts}
+    <p>Click the button to prompt up yo' life</p>
+{:else}
+    <p>Draw {object}</p>
+    <p>to illustrate {concept}</p>
+{/if}

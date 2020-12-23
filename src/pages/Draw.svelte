@@ -19,8 +19,8 @@
     import Advanced from "../components/Advanced.svelte";
     import Freestyle from "../components/Freestyle.svelte";
 
-    let classicResults: FixedPrompt[];
-    let advancedResults: FixedPrompt[];
+    let classicPrompts: FixedPrompt[];
+    let advancedPrompts: FixedPrompt[];
 
     let promptsArray: FreestylePrompt[] = [
         {
@@ -48,9 +48,9 @@
     let generate: () => void;
 
     $: if (mode === "classic") {
-        generate = () => (classicResults = generateClassic());
+        generate = () => (classicPrompts = generateClassic());
     } else if (mode === "advanced") {
-        generate = () => (advancedResults = generateAdvanced());
+        generate = () => (advancedPrompts = generateAdvanced());
     } else {
         generate = () => {
             promptsArray = generateFreestyle(promptsArray);
@@ -78,9 +78,9 @@
     <Toggle currentMode={mode} {switchMode} />
 
     {#if mode === 'classic'}
-        <Classic {classicResults} />
+        <Classic prompts={classicPrompts} />
     {:else if mode === 'advanced'}
-        <Advanced {advancedResults} />
+        <Advanced prompts={advancedPrompts} />
     {:else}
         <Freestyle
             {promptsArray}
