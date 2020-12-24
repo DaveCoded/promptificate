@@ -26,7 +26,7 @@
         {#if prompt.error}
             <p>{prompt.error}</p>
             <button on:click={() => deletePrompt(i)}>Delete</button>
-        {:else}
+        {:else if prompt.result}
             <PromptResult
                 prompt={prompt.result}
                 lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
