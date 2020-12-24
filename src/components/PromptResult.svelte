@@ -1,7 +1,5 @@
 <script lang="ts">
     import { fade } from "svelte/transition";
-    import type { Mode } from "../types/types";
-
     import Padlock from "../components/Padlock.svelte";
 
     export let prompt: string;
@@ -9,7 +7,6 @@
     export let isReady: boolean;
     export let lockPrompt: () => void;
     export let deletePrompt: () => void;
-    export let mode: Mode;
 </script>
 
 <style>
@@ -41,15 +38,13 @@
     <div transition:fade>
         <h4 class="prompt">
             {prompt}
-            {#if mode === 'freestyle'}
-                <button on:click={lockPrompt} class="padlock-button">
-                    <Padlock width={18} {isLocked} />
-                </button>
-                <button
-                    on:click={deletePrompt}
-                    disabled={isLocked}
-                    class="secondary-button delete-button">Delete</button>
-            {/if}
+            <button on:click={lockPrompt} class="padlock-button">
+                <Padlock width={18} {isLocked} />
+            </button>
+            <button
+                on:click={deletePrompt}
+                disabled={isLocked}
+                class="secondary-button delete-button">Delete</button>
         </h4>
     </div>
 {/if}

@@ -86,7 +86,6 @@
             {promptsArray}
             {categoryOptions}
             {isReady}
-            {mode}
             {addPrompt}
             {deletePrompt} />
     {/if}

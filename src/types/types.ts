@@ -9,4 +9,5 @@ export type FreestylePrompt = {
     category: string;
     result: string;
     isLocked: boolean;
+    error?: string;
 }
