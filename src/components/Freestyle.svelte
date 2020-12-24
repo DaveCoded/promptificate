@@ -9,7 +9,6 @@
     }
 
     export let isReady: boolean;
-    export let mode: Mode;
     export let promptsArray: FreestylePrompt[];
     export let categoryOptions: CategoryOption[];
     export let addPrompt: () => void;
@@ -22,13 +21,17 @@
             label={prompt + String(i)}
             bind:boundOption={prompt.category}
             {categoryOptions} />
-        <PromptResult
-            prompt={prompt.result}
-            lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
-            deletePrompt={() => deletePrompt(i)}
-            {isReady}
-            isLocked={prompt.isLocked}
-            {mode} />
+        {#if prompt.error}
+            <p>{prompt.error}</p>
+            <button on:click={() => deletePrompt(i)}>Delete</button>
+        {:else}
+            <PromptResult
+                prompt={prompt.result}
+                lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
+                deletePrompt={() => deletePrompt(i)}
+                {isReady}
+                isLocked={prompt.isLocked} />
+        {/if}
     </div>
 {/each}
 

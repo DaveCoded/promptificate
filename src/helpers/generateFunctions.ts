@@ -10,8 +10,16 @@ const getRandomResult = (category: string): string => {
 
 export const generateFreestyle = (promptsArray: FreestylePrompt[]) => {
     return promptsArray.map((prompt) => {
+        if (!prompt.category) {
+            return {
+                ...prompt,
+                error: "Please select a category"
+            }
+        }
+
         return {
             ...prompt,
+            error: "",
             result: prompt.isLocked
                 ? prompt.result
                 : getRandomResult(prompt.category)
