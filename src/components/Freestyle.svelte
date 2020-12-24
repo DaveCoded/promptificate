@@ -20,7 +20,9 @@
         <CategorySelect
             label={prompt + String(i)}
             bind:boundOption={prompt.category}
-            {categoryOptions} />
+            {categoryOptions}
+            isLocked={prompt.isLocked}
+            deletePrompt={() => deletePrompt(i)} />
         {#if prompt.error}
             <p>{prompt.error}</p>
             <button on:click={() => deletePrompt(i)}>Delete</button>
@@ -28,7 +30,6 @@
             <PromptResult
                 prompt={prompt.result}
                 lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
-                deletePrompt={() => deletePrompt(i)}
                 {isReady}
                 isLocked={prompt.isLocked} />
         {/if}
