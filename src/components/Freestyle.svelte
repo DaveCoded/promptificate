@@ -25,7 +25,6 @@
             deletePrompt={() => deletePrompt(i)} />
         {#if prompt.error}
             <p>{prompt.error}</p>
-            <button on:click={() => deletePrompt(i)}>Delete</button>
         {:else if prompt.result}
             <PromptResult
                 prompt={prompt.result}
