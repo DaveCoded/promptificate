@@ -6,4 +6,4 @@ import Navbar from "../components/Navbar.svelte";
 
 <Navbar />
 
-<h1>About Promptificate</h1>
+<h1>Hello from Home</h1>

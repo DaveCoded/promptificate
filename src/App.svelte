@@ -1,6 +1,7 @@
 <script lang="ts">
     import router from 'page'
 
+    import Home from './pages/Home.svelte'
     import Draw from './pages/Draw.svelte'
     import Develop from './pages/Develop.svelte'
     import About from './pages/About.svelte'
@@ -8,6 +9,7 @@
 
     let page: any
 
+    router('/', () => (page = Home))
     router('/draw', () => (page = Draw))
     router('/develop', () => (page = Develop))
     router('/about', () => (page = About))

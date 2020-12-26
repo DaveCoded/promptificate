@@ -1,5 +1,9 @@
 <script lang="ts">
+
+import Navbar from "../components/Navbar.svelte";
+
 </script>
 
-<nav><a href="/draw">Draw</a> <a href="/about">About</a></nav>
+<Navbar />
+
 <h1>Build this</h1>

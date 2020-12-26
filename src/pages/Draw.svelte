@@ -14,6 +14,7 @@
     } from "../helpers/generateFunctions";
     import type { Mode, FreestylePrompt, FixedPrompt } from "../types/types";
 
+    import Navbar from "../components/Navbar.svelte";
     import Toggle from "../components/Toggle.svelte";
     import Classic from "../components/Classic.svelte";
     import Advanced from "../components/Advanced.svelte";
@@ -70,7 +71,7 @@
     const switchMode = (newMode: Mode) => (mode = newMode);
 </script>
 
-<nav><a href="/develop">Develop</a> <a href="/about">About</a></nav>
+<Navbar />
 
 <h1>Draw this</h1>
 
