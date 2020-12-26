@@ -15,6 +15,8 @@ body {
 	text-align: center;
 	background: linear-gradient(180deg, #ffffff, #ffffff, #f1eff2, #d1cdd5);
 	color: rgb(48, 53, 89);
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 2em;
 	box-sizing: border-box;
 	font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -24,8 +26,15 @@ body {
 
 h1 {
 	font-size: 3.8rem;
-	font-family: 'DM Serif Text';
+	font-family: 'DM Serif Text', serif;
 	letter-spacing: 0.02em;
+}
+
+@media (max-width: 724px) {
+	h1 {
+		font-size: 3rem;
+		margin: 1.6rem;
+	}
 }
 
 h2 {
@@ -52,6 +61,19 @@ a:hover {
 
 a:visited {
 	color: #da295b;
+}
+
+div.promptResult {
+	height: 180px;
+	display: flex;
+	align-items: center;
+}
+
+p.promptResult {
+	margin: 0.4em;
+	font-size: 2rem;
+	line-height: 1.4;
+	font-family: 'Lato', sans-serif;
 }
 
 /* Forms */
@@ -132,6 +154,8 @@ nav a {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+	max-width: 660px;
+	margin: 0 auto;
 }
 
 .prompt-container {

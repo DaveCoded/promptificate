@@ -7,8 +7,10 @@
     $: style = prompts && prompts[2].result;
 </script>
 
+<div class="promptResult">
 {#if !prompts}
     <p>Click the button to prompt up yo' life</p>
 {:else}
-    <p>Draw {object} to illustrate {concept} in the style of {style}</p>
+    <p class="promptResult">Draw {object} to illustrate {concept} in the style of {style}</p>
 {/if}
+</div>
