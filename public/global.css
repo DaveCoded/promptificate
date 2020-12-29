@@ -50,19 +50,6 @@ p {
 	font-size: 1rem;
 }
 
-a {
-	color: #F6386F;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: #da295b;
-}
-
 div.promptResult {
 	min-height: 160px;
 	max-height: 100%;
@@ -160,6 +147,19 @@ button {
 	outline: none;
 }
 
+a {
+	color: #F6386F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #da295b;
+}
+
 nav {
 	display: flex;
 	flex-direction: row;
@@ -169,7 +169,7 @@ nav {
 
 nav a {
 	padding: 0 12px;
-	opacity: 80%;
+	opacity: 75%;
 	transition: all 600ms;
 }
 
