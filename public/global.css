@@ -124,7 +124,7 @@ button {
 	background: none;
 }
 
-.button {
+.promptButton {
 	color: rgb(247, 247, 243);
 	background: linear-gradient(180deg, #2e82ff, #1762e4);
 	font-size: 1.3em;
@@ -141,19 +141,23 @@ button {
 	transition: all 0.3s ease-in-out;
 }
 
-.button:disabled {
+.promptButton:disabled {
 	color: #999;
 }
 
-.button:not(:disabled):active {
+.promptButton:not(:disabled):active {
 	background-color: #ddd;
 }
 
-.button:hover {
+.promptButton:hover {
 	transform: scale(0.98);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.promptButton:focus {
+	outline: none;
 }
 
 nav {
