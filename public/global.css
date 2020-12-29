@@ -119,6 +119,10 @@ button {
 	background: none;
 }
 
+button:focus {
+	outline: none;
+}
+
 .promptButton {
 	color: rgb(247, 247, 243);
 	background: linear-gradient(180deg, #2e82ff, #1762e4);

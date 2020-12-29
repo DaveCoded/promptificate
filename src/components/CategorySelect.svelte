@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Category } from "../pages/Draw.svelte";
+    import CloseCross from "../components/CloseCross.svelte";
 
     export let label: string;
     export let boundOption: string = "";
@@ -9,19 +10,11 @@
 </script>
 
 <style>
-    .secondary-button {
+.secondary-button {
         margin: 0;
-        padding: 0.2em 0.4em;
         font-size: 0.6em;
-    }
+}
 
-    .delete-button {
-        background-color: #ff3333;
-    }
-
-    .delete-button:disabled {
-        background-color: #ccc;
-    }
 </style>
 
 <label for={label} />
@@ -34,4 +27,4 @@
 <button
     on:click={deletePrompt}
     disabled={isLocked}
-    class="secondary-button delete-button">Delete</button>
+    class="secondary-button delete-button"><CloseCross /></button>
