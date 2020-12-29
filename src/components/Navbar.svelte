@@ -4,7 +4,13 @@
 
 <style>
     .activeNav {
+        font-weight: 800;
         text-decoration: underline;
+        text-decoration-color: #EA215A;
+        text-decoration-thickness: .15em;
+        text-underline-offset: 4px;
+        opacity: 100%;
+        transition: all 600ms;
     }
 </style>
 

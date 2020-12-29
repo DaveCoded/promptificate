@@ -89,9 +89,9 @@ p.promptResult {
 span.promptVariable {
 	color: rgb(35, 122, 228);
 	text-decoration: underline;
-	text-decoration-color: rgb(44, 131, 237);
-  	text-decoration-thickness: 0.08em;
-  	text-underline-offset: 6px;
+	text-decoration-color: rgb(72, 154, 254);
+  	text-decoration-thickness: 0.06em;
+  	text-underline-offset: 7px;
 }
 
 
@@ -169,6 +169,17 @@ nav {
 
 nav a {
 	padding: 0 12px;
+	opacity: 80%;
+	transition: all 600ms;
+}
+
+nav a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: #f8b3c7;
+	text-decoration-thickness: .12em;
+	text-underline-offset: 6px;
+	transition: all 600ms;
 }
 
 .generator-container{
