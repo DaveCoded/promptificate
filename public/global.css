@@ -64,17 +64,36 @@ a:visited {
 }
 
 div.promptResult {
-	height: 180px;
+	min-height: 160px;
+	max-height: 100%;
 	display: flex;
 	align-items: center;
+	margin: 0 auto;
+}
+
+p.placeholderText {
+	color: rgb(136, 139, 165);
+	font-size: 1rem;
+	position: relative;
+	bottom: -4em;
 }
 
 p.promptResult {
 	margin: 0.4em;
-	font-size: 2rem;
-	line-height: 1.4;
+	font-size: 2.2rem;
+	line-height: 1.5;
 	font-family: 'Lato', sans-serif;
+	text-align: center;
 }
+
+span.promptVariable {
+	color: rgb(35, 122, 228);
+	text-decoration: underline;
+	text-decoration-color: rgb(44, 131, 237);
+  	text-decoration-thickness: 0.08em;
+  	text-underline-offset: 6px;
+}
+
 
 /* Forms */
 
