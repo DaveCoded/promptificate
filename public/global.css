@@ -33,7 +33,7 @@ h1 {
 @media (max-width: 724px) {
 	h1 {
 		font-size: 3rem;
-		margin: 1.6rem;
+		margin: 1rem auto;
 	}
 }
 
@@ -51,7 +51,7 @@ p {
 }
 
 div.promptResult {
-	min-height: 160px;
+	min-height: 170px;
 	max-height: 100%;
 	display: flex;
 	align-items: center;
@@ -79,6 +79,14 @@ span.promptVariable {
 	text-decoration-color: rgb(72, 154, 254);
   	text-decoration-thickness: 0.06em;
   	text-underline-offset: 7px;
+}
+
+@media (max-width: 724px) {
+	p.promptResult {
+		margin: 0.4em;
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
 }
 
 
@@ -126,6 +134,12 @@ button {
     0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
 	0 25px 20px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 724px) {
+	.promptButton {
+		font-size: 1em;
+	}
 }
 
 .promptButton:disabled {

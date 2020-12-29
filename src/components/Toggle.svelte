@@ -34,7 +34,6 @@
     .toggle {
         height: 32px;
         width: 52px;
-
         display: inline-block;
         position: relative;
         margin: 0 auto;
@@ -42,6 +41,17 @@
         background: linear-gradient(30deg, #3d67ff, #238dff);
         transition: all 0.2s ease;
     }
+
+    @media (max-width: 724px) {
+        .container {
+            padding: 0px 2px;
+            margin: 0.4em auto;
+        }
+        button {
+        padding: 0.5em 0.7em;
+    }
+
+}
 </style>
 
 <div class="container">
