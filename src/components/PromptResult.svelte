@@ -9,23 +9,33 @@
 </script>
 
 <style>
-    .prompt {
-        position: relative;
-        padding-left: 22px;
-    }
 
+div.promptContainer {
+        align-content: center;
+    }
     .padlock-button {
         background-color: transparent;
+        width: 25px;
+        display: inline-block;
+    }
+
+    p.promptResult {
+        margin: 0;
+        padding: 0;
+        font-size: 1.4em;
+        line-height: 1.3;
+        width: 85%;
+        display: inline-block;
     }
 </style>
 
 {#if isReady}
-    <div transition:fade>
-        <h4 class="prompt">
+    <div class="promptContainer" transition:fade>
+        <p class="promptResult">
             {prompt}
-            <button on:click={lockPrompt} class="padlock-button">
-                <Padlock width={18} {isLocked} />
-            </button>
-        </h4>
+        </p>
+        <button on:click={lockPrompt} class="padlock-button">
+            <Padlock width={18} {isLocked} />
+        </button>
     </div>
 {/if}

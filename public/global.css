@@ -5,16 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 html, body {
-	position: relative;
 	width: 100%;
-    height: 100%;
-    margin: 0;
+	height: 100vh;
+	margin: 0;
+	background: linear-gradient(180deg, #ffffff, #ffffff, rgb(248, 247, 249), #d8d6de);
+	color: rgb(48, 53, 89);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 body {
 	text-align: center;
-	background: linear-gradient(180deg, #ffffff, #ffffff, #f1eff2, #d1cdd5);
-	color: rgb(48, 53, 89);
 	padding: 2em;
 	box-sizing: border-box;
 	font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -24,8 +25,15 @@ body {
 
 h1 {
 	font-size: 3.8rem;
-	font-family: 'DM Serif Text';
+	font-family: 'DM Serif Text', serif;
 	letter-spacing: 0.02em;
+}
+
+@media (max-width: 724px) {
+	h1 {
+		font-size: 3rem;
+		margin: 1rem auto;
+	}
 }
 
 h2 {
@@ -41,18 +49,45 @@ p {
 	font-size: 1rem;
 }
 
-a {
-	color: #F6386F;
-	text-decoration: none;
+div.promptResult {
+	min-height: 170px;
+	max-height: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
 }
 
-a:hover {
+p.placeholderText {
+	color: rgb(136, 139, 165);
+	font-size: 1rem;
+	position: relative;
+	bottom: -4em;
+}
+
+p.promptResult {
+	margin: 0.4em;
+	font-size: 2.2rem;
+	line-height: 1.5;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+span.promptVariable {
+	color: rgb(35, 122, 228);
 	text-decoration: underline;
+	text-decoration-color: rgb(72, 154, 254);
+  	text-decoration-thickness: 0.06em;
+  	text-underline-offset: 7px;
 }
 
-a:visited {
-	color: #da295b;
+@media (max-width: 724px) {
+	p.promptResult {
+		margin: 0.4em;
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
 }
+
 
 /* Forms */
 
@@ -83,7 +118,11 @@ button {
 	background: none;
 }
 
-.button {
+button:focus {
+	outline: none;
+}
+
+.promptButton {
 	color: rgb(247, 247, 243);
 	background: linear-gradient(180deg, #2e82ff, #1762e4);
 	font-size: 1.3em;
@@ -100,19 +139,42 @@ button {
 	transition: all 0.3s ease-in-out;
 }
 
-.button:disabled {
+@media (max-width: 724px) {
+	.promptButton {
+		font-size: 1em;
+	}
+}
+
+.promptButton:disabled {
 	color: #999;
 }
 
-.button:not(:disabled):active {
+.promptButton:not(:disabled):active {
 	background-color: #ddd;
 }
 
-.button:hover {
+.promptButton:hover {
 	transform: scale(0.98);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.promptButton:focus {
+	outline: none;
+}
+
+a {
+	color: #F6386F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #da295b;
 }
 
 nav {
@@ -124,6 +186,17 @@ nav {
 
 nav a {
 	padding: 0 12px;
+	opacity: 75%;
+	transition: all 600ms;
+}
+
+nav a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: #f8b3c7;
+	text-decoration-thickness: .12em;
+	text-underline-offset: 6px;
+	transition: all 600ms;
 }
 
 .generator-container{
@@ -132,47 +205,9 @@ nav a {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-}
-
-.prompt-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	text-align: center;
-	max-width: 600px;
+	max-width: 660px;
 	margin: 0 auto;
 }
 
-.addPrompt {
-	align-content: center;
-	display: flex;
-	max-width: 200px;
-	margin: 12px auto 0;
-}
 
-.addPrompt span {
-	color: rgb(152, 156, 187);
-	text-align: center;
-	position: relative;
-	top: 16px;
-	padding-right: 8px;
-}
-
-.addPrompt svg {
-	display: block;
-	position: relative;
-}
 /* Select boxes */
-
-select {
-	width: 200px;
-	padding: 16px;
-	border: 1px solid rgb(222, 227, 233);
-	border-radius: 6px;
-	box-shadow: -6px -6px 12px rgb(255, 255, 255), 3px 3px 20px rgba(63, 63, 79, 0.01), 6px 6px 24px rgba(0, 6, 30, .09);
-}
-
-select:focus {
-	box-shadow: -6px -6px 12px rgb(255, 255, 255), 1px 1px 12px rgba(63, 63, 79, 0.05), 3px 3px 18px rgba(0, 6, 30, .1);
-	outline-color: #3ea5ff;
-}

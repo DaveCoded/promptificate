@@ -33,7 +33,7 @@ export let drawPromptsData: DrawPromptsData = {
         "Figure/Ground",
         "Symmetry",
         "Common Fate",
-        "Substitute",
+        "Substitute", 
         "Combine",
         "Adapt",
         "Magnify",

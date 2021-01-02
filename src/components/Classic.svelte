@@ -6,8 +6,15 @@
     $: concept = prompts && prompts[1].result;
 </script>
 
+<style>
+
+
+</style>
+
+<div class="promptResult">
 {#if !prompts}
-    <p>Ummm...click the button, maybe?</p>
+    <p class="placeholderText">Perhaps you'd like to click the button?</p>
 {:else}
-    <p>Draw {object} to illustrate {concept}</p>
+    <p class="promptResult">Draw <span class="promptVariable">{object}</span> to illustrate <span class="promptVariable">{concept}</span></p>
 {/if}
+</div>
