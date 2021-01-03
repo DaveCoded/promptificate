@@ -11,11 +11,14 @@
 <style>
 
 div.promptContainer {
-        align-content: center;
+    align-content: center;
+    align-items: center;
+    display: inline-flex;
+    height: 60px;
     }
     .padlock-button {
         background-color: transparent;
-        width: 25px;
+        width: 18px;
         display: inline-block;
     }
 
