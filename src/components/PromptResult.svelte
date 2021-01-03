@@ -9,12 +9,11 @@
 </script>
 
 <style>
-
-div.promptContainer {
-    align-content: center;
-    align-items: center;
-    display: inline-flex;
-    height: 60px;
+    div.promptContainer {
+        align-content: center;
+        align-items: center;
+        display: inline-flex;
+        height: 60px;
     }
     .padlock-button {
         background-color: transparent;
@@ -34,9 +33,7 @@ div.promptContainer {
 
 {#if isReady}
     <div class="promptContainer" transition:fade>
-        <p class="promptResult">
-            {prompt}
-        </p>
+        <p class="promptResult">{prompt}</p>
         <button on:click={lockPrompt} class="padlock-button">
             <Padlock width={14} {isLocked} />
         </button>

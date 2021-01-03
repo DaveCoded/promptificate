@@ -8,9 +8,16 @@
 </script>
 
 <div class="promptResult">
-{#if !prompts}
-    <p class="placeholderText">Feeling button-clicky today?</p>
-{:else}
-    <p class="promptResult">Draw <span class="promptVariable object">{object}</span> to illustrate <span class="promptVariable concept">{concept}</span> in the style of <span class="promptVariable style">{style}</span></p>
-{/if}
+    {#if !prompts}
+        <p class="placeholderText">Feeling button-clicky today?</p>
+    {:else}
+        <p class="promptResult">
+            Draw
+            <span class="promptVariable object">{object}</span>
+            to illustrate
+            <span class="promptVariable concept">{concept}</span>
+            in the style of
+            <span class="promptVariable style">{style}</span>
+        </p>
+    {/if}
 </div>
