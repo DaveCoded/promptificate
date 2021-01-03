@@ -49,5 +49,7 @@ label {
     <button
         on:click={deletePrompt}
         disabled={isLocked}
-        class="secondary-button delete-button"><CloseCross /></button>
+        class="secondary-button delete-button">
+        <CloseCross isLocked={isLocked} /></button>
+    
 </div>
