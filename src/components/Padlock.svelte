@@ -1,13 +1,13 @@
 <script lang="ts">
-    export let width: number = 18
-    export let openColor: string = '#999'
-    export let lockedColor: string = '#555'
+    export let width: number = 14
+    export let openColor: string = '#989CBB'
+    export let lockedColor: string = '#878CB0'
     export let isLocked: boolean = false
 </script>
 
 <style>
     #Path_1 {
-        transition: transform 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
 </style>
 

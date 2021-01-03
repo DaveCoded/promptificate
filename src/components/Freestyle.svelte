@@ -20,7 +20,7 @@
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-    width: 300px;
+    width: 320px;
     height: 100px;
     margin: 0.3em auto;
     padding: 10px;
