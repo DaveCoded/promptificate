@@ -4,4 +4,4 @@
 
 <Navbar />
 
-<h1>About Promptificate</h1>
+<h1>This is a website</h1>
