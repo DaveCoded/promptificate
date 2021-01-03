@@ -93,4 +93,3 @@
 
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>
-
