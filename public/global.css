@@ -1,8 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('fonts/DMSerifText-Regular.woff2') format('woff2'),
+        url('fonts/DMSerifText-Regular.woff') format('woff'),
+        url('fonts/DMSerifText-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lato:wght@400&display=swap');
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.woff2') format('woff2'),
+        url('fonts/Lato-Regular.woff') format('woff'),
+        url('fonts/Lato-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.woff2') format('woff2'),
+        url('fonts/Lato-Bold.woff') format('woff'),
+        url('fonts/Lato-Bold.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}
 
 html, body {
 	width: 100%;
@@ -73,11 +94,8 @@ p.promptResult {
 }
 
 span.promptVariable {
-	color: rgb(35, 122, 228);
-	text-decoration: underline;
-	text-decoration-color: rgb(72, 154, 254);
-  	text-decoration-thickness: 0.06em;
-  	text-underline-offset: 7px;
+    color: rgb(35, 122, 228);
+    font-weight: 700;
 }
 
 @media (max-width: 724px) {
@@ -115,7 +133,8 @@ input:disabled {
 
 button {
 	border: none;
-	background: none;
+    background: none;
+    cursor: pointer;
 }
 
 button:focus {

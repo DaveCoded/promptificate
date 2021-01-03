@@ -30,17 +30,6 @@
         background: linear-gradient(0deg, #2e58f0, #3195ff);
     }
 
-    .toggle {
-        height: 32px;
-        width: 52px;
-        display: inline-block;
-        position: relative;
-        margin: 0 auto;
-        border: 1px solid #d8eaff;
-        background: linear-gradient(30deg, #3d67ff, #238dff);
-        transition: all 0.2s ease;
-    }
-
     @media (max-width: 724px) {
         .container {
             padding: 0px 2px;

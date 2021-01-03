@@ -1,8 +1,8 @@
 <script lang="ts">
-    export let width: number = 14
-    export let openColor: string = '#989CBB'
-    export let lockedColor: string = '#878CB0'
-    export let isLocked: boolean = false
+    export let width: number = 14;
+    export let openColor: string = "#989CBB";
+    export let lockedColor: string = "#878CB0";
+    export let isLocked: boolean = false;
 </script>
 
 <style>
@@ -12,7 +12,10 @@
 </style>
 
 <svg xmlns="http://www.w3.org/2000/svg" {width} viewBox="0 -35 240 298">
-    <g id="Whole_Padlock" data-name="Whole Padlock" transform="translate(-841 -343.027)">
+    <g
+        id="Whole_Padlock"
+        data-name="Whole Padlock"
+        transform="translate(-841 -343.027)">
         <path
             id="Rectangle"
             d="M30,0H210c16.569,0,30,11.394,30,25.449V132.334c0,14.055-13.431,25.449-30,25.449H30c-16.569,0-30-11.394-30-25.449V25.449C0,11.394,13.431,0,30,0Z"

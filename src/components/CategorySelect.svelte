@@ -10,32 +10,26 @@
 </script>
 
 <style>
-
-.categoryContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.secondary-button {
+    .categoryContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .secondary-button {
         margin: 0;
         font-size: 0.6em;
-}
-select {
-    border: none;
-    padding: 0;
-    margin: 0;
-    max-width: 62%;
-    font-size: 0.8em;
-}
+    }
+    select {
+        border: none;
+        padding: 0;
+        margin: 0;
+        max-width: 62%;
+        font-size: 0.8em;
+    }
 
-select:focus {
-	
-}
-
-label {
-    display: none;
-}
-
+    label {
+        display: none;
+    }
 </style>
 
 <div class="categoryContainer">
@@ -50,6 +44,5 @@ label {
         on:click={deletePrompt}
         disabled={isLocked}
         class="secondary-button delete-button">
-        <CloseCross isLocked={isLocked} /></button>
-    
+        <CloseCross {isLocked} /></button>
 </div>
