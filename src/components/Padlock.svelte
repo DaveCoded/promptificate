@@ -7,7 +7,7 @@
 
 <style>
     #Path_1 {
-        transition: transform 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
 </style>
 
