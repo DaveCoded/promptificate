@@ -11,11 +11,14 @@
 <style>
 
 div.promptContainer {
-        align-content: center;
+    align-content: center;
+    align-items: center;
+    display: inline-flex;
+    height: 60px;
     }
     .padlock-button {
         background-color: transparent;
-        width: 25px;
+        width: 18px;
         display: inline-block;
     }
 
@@ -35,7 +38,7 @@ div.promptContainer {
             {prompt}
         </p>
         <button on:click={lockPrompt} class="padlock-button">
-            <Padlock width={18} {isLocked} />
+            <Padlock width={14} {isLocked} />
         </button>
     </div>
 {/if}
