@@ -23,7 +23,22 @@ export let drawPromptsData: DrawPromptsData = {
         "Celtic folk art",
         "Cave art",
         "Aztec carvings",
-        "The Simpsons"
+        "The Simpsons",
+        "Pop art",
+        "Egyptian heiroglyphics",
+        "Pixel art",
+        "Brutalism",
+        "Cubo-futurism",
+        "Graffiti",
+        "De Stijl",
+        "Kinetic pointillism",
+        "Kitsch",
+        "Mingei",
+        "Optical illusions",
+        "Retrofuturism",
+        "Ukiyo-e",
+        "Calvin and Hobbes",
+        "Wes Anderson"
     ],
     designPrinciple: [
         "Negative space",
@@ -116,7 +131,9 @@ export let drawPromptsData: DrawPromptsData = {
         "a raven",
         "a snowflake",
         "a poisoned rose",
-        "a hippopotamus"
+        "a hippopotamus",
+        "a cereal box",
+        "a Christmas ornament",
     ],
     mood: [
         "Anxious",
@@ -156,6 +173,16 @@ export let drawPromptsData: DrawPromptsData = {
         "Adderall addiction",
         "the dark net",
         "judgement day",
-        "class inequality"
+        "class inequality",
+        "cartesian dualism",
+        "commodity fetishism",
+        "the Bechdel test",
+        "tall poppy syndrome",
+        "outrage porn",
+        "clickbait",
+        "feral children",
+        "obsessive compulsive disorder",
+        "being too high",
+        "grammar naziam"
     ],
 };
