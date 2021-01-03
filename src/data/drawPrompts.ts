@@ -184,6 +184,10 @@ export let drawPromptsData: DrawPromptsData = {
         "being too high",
         "grammar Nazism",
         "pedantry",
-        "the overton window"
+        "the overton window",
+        "effective altruism",
+        "turtles all the way down",
+        "moral relativism",
+        "transhumanism"
     ],
 };
