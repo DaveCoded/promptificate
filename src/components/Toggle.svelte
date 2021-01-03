@@ -28,7 +28,6 @@
     .active {
         color: white;
         background: linear-gradient(0deg, #2e58f0, #3195ff);
-        border: 1px solid #2c79ec;
     }
 
     .toggle {
@@ -48,10 +47,9 @@
             margin: 0.4em auto;
         }
         button {
-        padding: 0.5em 0.7em;
+            padding: 0.5em 0.7em;
+        }
     }
-
-}
 </style>
 
 <div class="container">
