@@ -54,8 +54,12 @@
     }
 
     .addPrompt svg {
-        display: block;
-        position: relative;
+      display: block;
+      position: relative;
+    }
+
+    p.promptError {
+        color: #878CB0;
     }
 </style>
 
@@ -68,7 +72,7 @@
             isLocked={prompt.isLocked}
             deletePrompt={() => deletePrompt(i)} />
         {#if prompt.error}
-            <p>{prompt.error}</p>
+            <p class="promptError">{prompt.error}</p>
         {:else if prompt.result}
             <PromptResult
                 prompt={prompt.result}

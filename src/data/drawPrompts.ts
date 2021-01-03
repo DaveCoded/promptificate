@@ -23,7 +23,22 @@ export let drawPromptsData: DrawPromptsData = {
         "Celtic folk art",
         "Cave art",
         "Aztec carvings",
-        "The Simpsons"
+        "The Simpsons",
+        "Pop art",
+        "Egyptian heiroglyphics",
+        "Pixel art",
+        "Brutalism",
+        "Cubo-futurism",
+        "Graffiti",
+        "De Stijl",
+        "Kinetic pointillism",
+        "Kitsch",
+        "Mingei",
+        "Optical illusions",
+        "Retrofuturism",
+        "Ukiyo-e",
+        "Calvin and Hobbes",
+        "Wes Anderson"
     ],
     designPrinciple: [
         "Negative space",
@@ -116,7 +131,10 @@ export let drawPromptsData: DrawPromptsData = {
         "a raven",
         "a snowflake",
         "a poisoned rose",
-        "a hippopotamus"
+        "a hippopotamus",
+        "a cereal box",
+        "a Christmas ornament",
+        "the juice of a thousand oranges"
     ],
     mood: [
         "Anxious",
@@ -147,7 +165,6 @@ export let drawPromptsData: DrawPromptsData = {
         "commodifying children's hopes and dreams",
         "the subprime mortgage crisis",
         "domestic 'terrorism'",
-        "Bolshevism",
         "fully automated luxury communism",
         "indifference to poverty",
         "digital detoxing",
@@ -156,6 +173,21 @@ export let drawPromptsData: DrawPromptsData = {
         "Adderall addiction",
         "the dark net",
         "judgement day",
-        "class inequality"
+        "class inequality",
+        "Cartesian dualism",
+        "commodity fetishism",
+        "tall poppy syndrome",
+        "outrage porn",
+        "clickbait",
+        "feral children",
+        "obsessive compulsive disorder",
+        "being too high",
+        "grammar Nazism",
+        "pedantry",
+        "the overton window",
+        "effective altruism",
+        "turtles all the way down",
+        "moral relativism",
+        "transhumanism"
     ],
 };
