@@ -1,7 +1,7 @@
 <script lang="ts">
-    export let width: number = 18
-    export let openColor: string = 'rgb(152, 156, 187)'
-    export let lockedColor: string = 'rgb(152, 156, 187)'
+    export let width: number = 14
+    export let openColor: string = '#989CBB'
+    export let lockedColor: string = '#878CB0'
     export let isLocked: boolean = false
 </script>
 

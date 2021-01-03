@@ -35,7 +35,7 @@ div.promptContainer {
             {prompt}
         </p>
         <button on:click={lockPrompt} class="padlock-button">
-            <Padlock width={18} {isLocked} />
+            <Padlock width={14} {isLocked} />
         </button>
     </div>
 {/if}
