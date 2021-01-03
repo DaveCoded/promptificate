@@ -20,21 +20,27 @@
     import Advanced from "../components/Advanced.svelte";
     import Freestyle from "../components/Freestyle.svelte";
 
-    let classicPrompts: FixedPrompt[];
-    let advancedPrompts: FixedPrompt[];
+    let classicPrompts: FixedPrompt[] = generateClassic();
+    let advancedPrompts: FixedPrompt[] = generateAdvanced();
 
     let promptsArray: FreestylePrompt[] = [
         {
-            category: "",
+            category: "object",
             result: "",
             isLocked: false,
         },
         {
-            category: "",
+            category: "visualStyle",
+            result: "",
+            isLocked: false,
+        },
+        {
+            category: "designPrinciple",
             result: "",
             isLocked: false,
         },
     ];
+    promptsArray = generateFreestyle(promptsArray);
 
     const categoryOptions = [
         { value: "visualStyle", text: "Visual Style" },
@@ -44,7 +50,6 @@
         { value: "abstractConcept", text: "Abstract Concept" },
     ];
 
-    let isReady = false;
     let mode: Mode = "classic";
     let generate: () => void;
 
@@ -55,7 +60,6 @@
     } else {
         generate = () => {
             promptsArray = generateFreestyle(promptsArray);
-            isReady = true;
         };
     }
 
@@ -84,7 +88,6 @@
         <Freestyle
             {promptsArray}
             {categoryOptions}
-            {isReady}
             {addPrompt}
             {deletePrompt} />
     {/if}

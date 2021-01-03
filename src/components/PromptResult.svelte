@@ -4,7 +4,6 @@
 
     export let prompt: string;
     export let isLocked: boolean;
-    export let isReady: boolean;
     export let lockPrompt: () => void;
 </script>
 
@@ -31,11 +30,9 @@
     }
 </style>
 
-{#if isReady}
-    <div class="promptContainer" transition:fade>
-        <p class="promptResult">{prompt}</p>
-        <button on:click={lockPrompt} class="padlock-button">
-            <Padlock width={14} {isLocked} />
-        </button>
-    </div>
-{/if}
+<div class="promptContainer" transition:fade>
+    <p class="promptResult">{prompt}</p>
+    <button on:click={lockPrompt} class="padlock-button">
+        <Padlock width={14} {isLocked} />
+    </button>
+</div>

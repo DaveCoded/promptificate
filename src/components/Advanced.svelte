@@ -7,7 +7,7 @@
     $: style = prompts && prompts[2].result;
 </script>
 
-<div class="promptResult">
+<div class="promptResultWrapper">
     {#if !prompts}
         <p class="placeholderText">Feeling button-clicky today?</p>
     {:else}

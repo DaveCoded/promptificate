@@ -1,14 +1,13 @@
 <script lang="ts">
     import CategorySelect from "../components/CategorySelect.svelte";
     import PromptResult from "../components/PromptResult.svelte";
-    import type { FreestylePrompt, Mode } from "../types/types";
+    import type { FreestylePrompt } from "../types/types";
 
     interface CategoryOption {
         value: string;
         text: string;
     }
 
-    export let isReady: boolean;
     export let promptsArray: FreestylePrompt[];
     export let categoryOptions: CategoryOption[];
     export let addPrompt: () => void;
@@ -77,7 +76,6 @@
             <PromptResult
                 prompt={prompt.result}
                 lockPrompt={() => (prompt.isLocked = !prompt.isLocked)}
-                {isReady}
                 isLocked={prompt.isLocked} />
         {/if}
     </div>

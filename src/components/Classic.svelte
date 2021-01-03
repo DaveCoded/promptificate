@@ -6,7 +6,7 @@
     $: concept = prompts && prompts[1].result;
 </script>
 
-<div class="promptResult">
+<div class="promptResultWrapper">
     {#if !prompts}
         <p class="placeholderText">Perhaps you'd like to click the button?</p>
     {:else}
