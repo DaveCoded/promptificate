@@ -134,6 +134,7 @@ export let drawPromptsData: DrawPromptsData = {
         "a hippopotamus",
         "a cereal box",
         "a Christmas ornament",
+        "the juice of a thousand oranges"
     ],
     mood: [
         "Anxious",
@@ -182,5 +183,7 @@ export let drawPromptsData: DrawPromptsData = {
         "obsessive compulsive disorder",
         "being too high",
         "grammar Nazism",
+        "pedantry",
+        "the overton window"
     ],
 };
