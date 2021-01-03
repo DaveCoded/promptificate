@@ -16,48 +16,51 @@
 </script>
 
 <style>
-.prompt-container {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-    width: 320px;
-    height: 100px;
-    margin: 0.3em auto;
-    padding: 10px;
-    background:rgb(255, 255, 255);
-    border: 1px solid rgb(228, 232, 237);
-    border-radius: 6px;
-    box-shadow: 3px 3px 20px rgba(63, 63, 79, 0.01), 6px 6px 24px rgba(0, 6, 30, .09);
-}
+    .prompt-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 320px;
+        height: 100px;
+        margin: 0.3em auto;
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(228, 232, 237);
+        border-radius: 6px;
+        box-shadow: 3px 3px 20px rgba(63, 63, 79, 0.01),
+            6px 6px 24px rgba(0, 6, 30, 0.09);
+    }
 
-.prompt-container:focus {
-    box-shadow: -6px -6px 12px rgb(255, 255, 255), 1px 1px 12px rgba(63, 63, 79, 0.05), 3px 3px 18px rgba(0, 6, 30, .1);
-	outline-color: #3ea5ff;
-}
+    .prompt-container:focus {
+        box-shadow: -6px -6px 12px rgb(255, 255, 255),
+            1px 1px 12px rgba(63, 63, 79, 0.05),
+            3px 3px 18px rgba(0, 6, 30, 0.1);
+        outline-color: #3ea5ff;
+    }
 
-.addPrompt {
-	align-content: center;
-	display: flex;
-	max-width: 200px;
-	margin: 12px auto 0;
-}
+    .addPrompt {
+        align-content: center;
+        display: flex;
+        max-width: 200px;
+        margin: 12px auto 0;
+    }
 
-.addPrompt span {
-	color: rgb(152, 156, 187);
-	text-align: center;
-	position: relative;
-	top: 16px;
-	padding-right: 8px;
-}
+    .addPrompt span {
+        color: rgb(152, 156, 187);
+        text-align: center;
+        position: relative;
+        top: 16px;
+        padding-right: 8px;
+    }
 
-.addPrompt svg {
-	display: block;
-	position: relative;
-}
+    .addPrompt svg {
+      display: block;
+      position: relative;
+    }
 
-p.promptError {
-    color: #878CB0;
-}
+    p.promptError {
+        color: #878CB0;
+    }
 </style>
 
 {#each promptsArray as prompt, i}

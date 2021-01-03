@@ -73,8 +73,6 @@
 
 <Navbar />
 
-<h1>Draw this</h1>
-
 <div class="generator-container">
     <Toggle currentMode={mode} {switchMode} />
 
@@ -93,4 +91,3 @@
 
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>
-
