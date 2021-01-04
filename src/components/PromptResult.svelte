@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
     import Padlock from "../components/Padlock.svelte";
 
     export let prompt: string;
@@ -30,7 +29,7 @@
     }
 </style>
 
-<div class="promptContainer" transition:fade>
+<div class="promptContainer">
     <p class="promptResult">{prompt}</p>
     <button on:click={lockPrompt} class="padlock-button">
         <Padlock width={14} {isLocked} />
