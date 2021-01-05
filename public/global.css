@@ -204,7 +204,7 @@ nav {
 }
 
 nav a {
-	padding: 0 12px;
+	padding: 0 10px;
 	opacity: 75%;
 	transition: all 600ms;
 }
@@ -216,6 +216,7 @@ nav a:hover {
 	text-decoration-thickness: .12em;
 	text-underline-offset: 6px;
 	transition: all 600ms;
+	opacity: 100%;
 }
 
 .generator-container{

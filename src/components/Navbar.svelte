@@ -1,8 +1,10 @@
 <script lang="ts">
     let path = window.location.href;
+    import Logo from "../img/SVG/promptlogo.svelte"
 </script>
 
 <style>
+
     .activeNav {
         font-weight: 800;
         text-decoration: underline;
@@ -15,8 +17,9 @@
 </style>
 
 <nav>
-    <!-- <a href="/" class:activeNav={path.endsWith('/')}>Home</a> -->
-    <!-- <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a> -->
-    <a href="/" class:activeNav={path.endsWith('/')}>Draw</a>
-    <a href="/about" class:activeNav={path.endsWith('/about')}>About</a>
+    <Logo />
+        <!-- <a href="/" class:activeNav={path.endsWith('/')}>Home</a> -->
+        <!-- <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a> -->
+        <a href="/" class:activeNav={path.endsWith('/')}>Draw</a>
+        <a href="/about" class:activeNav={path.endsWith('/about')}>About</a> 
 </nav>
