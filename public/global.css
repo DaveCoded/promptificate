@@ -37,7 +37,7 @@ html, body {
 
 body {
 	text-align: center;
-	padding: 2em;
+	padding: 1.6em;
 	box-sizing: border-box;
 	font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -71,11 +71,17 @@ p {
 }
 
 div.promptResultWrapper {
-	min-height: 170px;
+	min-height: 236px;
 	max-height: 100%;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
+}
+
+@media (max-width: 724px) {
+	div.promptResultWrapper {
+		min-height: 200px;
+	}
 }
 
 p.placeholderText {
@@ -86,8 +92,8 @@ p.placeholderText {
 }
 
 p.promptResult {
-	margin: 0.4em;
-	font-size: 2.2rem;
+	margin: 0.6em;
+	font-size: 2.6rem;
 	line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
@@ -100,8 +106,8 @@ span.promptVariable {
 
 @media (max-width: 724px) {
 	p.promptResult {
-		margin: 0.4em;
-		font-size: 1.6rem;
+		margin: 0.8em auto;
+		font-size: 2rem;
 		line-height: 1.5;
 	}
 }
@@ -196,28 +202,6 @@ a:visited {
 	color: #da295b;
 }
 
-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	padding-bottom: 1em;
-}
-
-nav a {
-	padding: 0 10px;
-	opacity: 75%;
-	transition: all 600ms;
-}
-
-nav a:hover {
-	font-weight: 700;
-	text-decoration: underline;
-	text-decoration-color: #f8b3c7;
-	text-decoration-thickness: .12em;
-	text-underline-offset: 6px;
-	transition: all 600ms;
-	opacity: 100%;
-}
 
 .generator-container{
 	text-align: center;
@@ -225,8 +209,14 @@ nav a:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-	max-width: 660px;
+	max-width: 760px;
 	margin: 0 auto;
+}
+
+@media (max-width: 724px) {
+	.generator-container{
+		max-width: 100%;
+	}
 }
 
 

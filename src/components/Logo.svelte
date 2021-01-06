@@ -2,6 +2,21 @@
     let fillcolour = "#EA215B"
 </script>
 
+<style>
+    svg {
+        top: -2px;
+        position: relative;
+        padding-right: 0.8em;
+        opacity: 80%;
+        transition: all 150ms ease-out;
+    }
+
+    svg:hover {
+        opacity: 100%;
+        transform: scale(1.05);
+    }
+</style>
+
 <a href="/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30"><g id="Layer_1-2" data-name="Layer 1">
         <path d="M61,1.16A50.1,50.1,0,0,1,92.1,23a2.24,2.24,0,0,1-.77,3.13L74,36.11a2.21,2.21,0,0,1-2.92-.65A25.66,25.66,0,0,0,56.43,25.17a2.21,2.21,0,0,1-1.61-2.54L58.29,3A2.23,2.23,0,0,1,61,1.16Z" fill={fillcolour} />
