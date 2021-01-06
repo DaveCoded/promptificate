@@ -1,6 +1,12 @@
-<script>
+<script lang="ts">
+    import type { Mode } from "../types/types";
+    import { capitalizeFirstLetter } from "../helpers/utilities";
+
+    export let modes: Mode[];
     export let currentMode = "classic";
-    export let switchMode;
+    export let switchMode: (mode: Mode) => void;
+
+    let modeNames = modes.map((mode) => capitalizeFirstLetter(mode));
 </script>
 
 <style>
@@ -42,15 +48,9 @@
 </style>
 
 <div class="container">
-    <button
-        class={currentMode === 'classic' ? 'active' : ''}
-        on:click={() => switchMode('classic')}>Classic</button>
-
-    <button
-        class={currentMode === 'advanced' ? 'active' : ''}
-        on:click={() => switchMode('advanced')}>Advanced</button>
-
-    <button
-        class={currentMode === 'freestyle' ? 'active' : ''}
-        on:click={() => switchMode('freestyle')}>Freestyle</button>
+    {#each modes as mode, i}
+        <button
+            class={currentMode === mode ? 'active' : ''}
+            on:click={() => switchMode(mode)}>{modeNames[i]}</button>
+    {/each}
 </div>
