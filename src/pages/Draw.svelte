@@ -7,6 +7,7 @@
 </script>
 
 <script lang="ts">
+
     import {
         generateClassic,
         generateAdvanced,
@@ -19,6 +20,7 @@
     import Classic from "../components/Classic.svelte";
     import Advanced from "../components/Advanced.svelte";
     import Freestyle from "../components/Freestyle.svelte";
+    import TweetPrompt from "../components/TweetPrompt.svelte";
 
     let classicPrompts: FixedPrompt[] = generateClassic();
     let advancedPrompts: FixedPrompt[] = generateAdvanced();
@@ -94,3 +96,5 @@
 
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>
+
+<TweetPrompt />
