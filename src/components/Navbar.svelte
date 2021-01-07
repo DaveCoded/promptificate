@@ -4,7 +4,7 @@
 </script>
 
 <style>
-    nav {
+nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
@@ -18,7 +18,6 @@ nav a {
 }
 
 nav a:hover {
-	font-weight: 700;
 	text-decoration: underline;
 	text-decoration-color: #f8b3c7;
 	text-decoration-thickness: .12em;
@@ -27,7 +26,6 @@ nav a:hover {
 	opacity: 100%;
 }
     .activeNav {
-        font-weight: 800;
         text-decoration: underline;
         text-decoration-color: #ea215a;
         text-decoration-thickness: 0.15em;
@@ -35,6 +33,13 @@ nav a:hover {
         opacity: 100%;
         transition: all 600ms;
     }
+
+    .rightAlign {
+        margin-left: auto;
+        color: #71758f;
+        font-size: 0.9em;
+    }
+
 </style>
 
 <nav>
@@ -43,4 +48,5 @@ nav a:hover {
         <!-- <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a> -->
         <a href="/" class:activeNav={path.endsWith('/')}>Draw</a>
         <a href="/about" class:activeNav={path.endsWith('/about')}>About</a> 
+        <a class="rightAlign" href="https://github.com/DaveCoded/promptificate/blob/main/src/data/drawPrompts.ts">Contibute prompts</a>
 </nav>
