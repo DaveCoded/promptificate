@@ -17,10 +17,10 @@ There are three modes: Classic, Advanced, and Freestyle
 
 ## Example Prompts
 
-![](./images/puyl_demo_1.png)
+![](./images/puyl_demo_6.png)
 
 ![](./images/puyl_demo_2.png)
 
 ![](./images/puyl_demo_3.png)
 
-![](./images/puyl_demo_4.png)
+![](./images/puyl_demo_8.png)
