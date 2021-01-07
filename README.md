@@ -12,9 +12,10 @@ There are three modes: Classic, Advanced, and Freestyle
 - Advanced gives you a physical _thing_, an abstract _concept_, and a visual _style_.
 - Freestyle lets you mix and match as many prompt categories as you like. You can pick from _objects_, _abstract concepts_, _visual styles_, _design principles_, and _moods_.
 
+<br />
 
 
-Here are some example prompts PUYL gives:
+## Example Prompts
 
 ![](./images/puyl_demo_1.png)
 
