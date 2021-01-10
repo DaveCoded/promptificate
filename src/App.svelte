@@ -9,9 +9,9 @@
 
     let page: any;
 
-    router("/", () => (page = Draw));
-    // router("/draw", () => (page = Draw));
-    // router("/develop", () => (page = Develop));
+    router("/", () => (page = Home));
+    router("/draw", () => (page = Draw));
+    router("/develop", () => (page = Develop));
     router("/about", () => (page = About));
     router("/*", () => (page = NotFound));
 
