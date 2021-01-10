@@ -1,31 +1,29 @@
 <script lang="ts">
     let path = window.location.href;
-    import Logo from "./Logo.svelte"
+    import Logo from "./Logo.svelte";
 </script>
 
 <style>
     nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	padding-bottom: 1em;
-}
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-bottom: 1em;
+    }
 
-nav a {
-	padding: 0 10px;
-	opacity: 75%;
-	transition: all 600ms;
-}
+    nav a {
+        padding: 0 10px;
+        opacity: 75%;
+        transition: all 600ms;
+    }
 
-nav a:hover {
-	font-weight: 700;
-	text-decoration: underline;
-	text-decoration-color: #f8b3c7;
-	text-decoration-thickness: .12em;
-	text-underline-offset: 6px;
-	transition: all 600ms;
-	opacity: 100%;
-}
+    nav a:hover {
+        text-decoration: underline;
+        text-decoration-color: #f8b3c7;
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 6px;
+        opacity: 100%;
+    }
     .activeNav {
         font-weight: 800;
         text-decoration: underline;
