@@ -1,9 +1,10 @@
 import type { FreestylePrompt } from "../types/types"
 import { drawPromptsData } from "../data/drawPrompts";
+import { devPromptsData } from "../data/devPrompts";
 import { getRandomInt } from "./mathsHelpers";
 
-const getRandomResult = (category: string): string => {
-    const options = drawPromptsData[category];
+const getRandomResult = (category: string, data: any): string => {
+    const options = data[category];
     const randomIndex = getRandomInt(0, options.length);
     return options[randomIndex];
 }
@@ -22,33 +23,59 @@ export const generateFreestyle = (promptsArray: FreestylePrompt[]) => {
             error: "",
             result: prompt.isLocked
                 ? prompt.result
-                : getRandomResult(prompt.category)
+                : getRandomResult(prompt.category, drawPromptsData)
         };
     });
 };
 
+export const generateDevClassic = () => [
+    {
+        category: "uiComponent",
+        result: getRandomResult("uiComponent", devPromptsData)
+    },
+    {
+        category: "inspirator",
+        result: getRandomResult("inspirator", devPromptsData)
+    }
+];
+
+export const generateDevAdvanced = () => [
+    {
+        category: "uiComponent",
+        result: getRandomResult("uiComponent", devPromptsData)
+    },
+    {
+        category: "inspirator",
+        result: getRandomResult("inspirator", devPromptsData)
+    },
+    {
+        category: "challenge",
+        result: getRandomResult("challenge", devPromptsData)
+    }
+];
+
 export const generateClassic = () => [
     {
         category: "object",
-        result: getRandomResult("object")
+        result: getRandomResult("object", drawPromptsData)
     },
     {
         category: "abstractConcept",
-        result: getRandomResult("abstractConcept")
+        result: getRandomResult("abstractConcept", drawPromptsData)
     }
 ];
 
 export const generateAdvanced = () => [
     {
         category: "object",
-        result: getRandomResult("object")
+        result: getRandomResult("object", drawPromptsData)
     },
     {
         category: "abstractConcept",
-        result: getRandomResult("abstractConcept")
+        result: getRandomResult("abstractConcept", drawPromptsData)
     },
     {
         category: "visualStyle",
-        result: getRandomResult("visualStyle")
+        result: getRandomResult("visualStyle", drawPromptsData)
     }
 ];

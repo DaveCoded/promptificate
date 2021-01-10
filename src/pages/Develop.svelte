@@ -3,28 +3,30 @@
     import Toggle from "../components/Toggle.svelte";
     import ClassicDev from "../components/ClassicDev.svelte";
     import AdvancedDev from "../components/AdvancedDev.svelte";
+    import {
+        generateDevAdvanced,
+        generateDevClassic,
+    } from "../helpers/generateFunctions";
 
     import type { FixedPrompt, Mode } from "../types/types";
     let mode: Mode = "classic";
     const switchMode = (newMode: Mode) => (mode = newMode);
 
-    let classicPrompts: FixedPrompt[] = [
-        { category: "Something", result: "result" },
-        { category: "something", result: "something else" },
-    ];
-    let advancedPrompts: FixedPrompt[] = [
-        { category: "Something", result: "result" },
-        { category: "something", result: "something else" },
-    ];
+    let classicPrompts: FixedPrompt[] = generateDevClassic();
+    let advancedPrompts: FixedPrompt[] = generateDevAdvanced();
+    let generate: () => void;
 
-    let generate = () => console.log("generate");
+    $: if (mode === "classic") {
+        generate = () => (classicPrompts = generateDevClassic());
+    } else if (mode === "advanced") {
+        generate = () => (advancedPrompts = generateDevAdvanced());
+    }
 </script>
 
 <Navbar />
 
 <div class="generator-container">
     <Toggle modes={['classic', 'advanced']} currentMode={mode} {switchMode} />
-
     {#if mode === 'classic'}
         <ClassicDev prompts={classicPrompts} />
     {:else}
