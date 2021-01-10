@@ -74,8 +74,8 @@ div.promptResultWrapper {
 	min-height: 236px;
 	max-height: 100%;
 	display: flex;
-	align-items: center;
-	margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 724px) {
@@ -95,8 +95,6 @@ p.promptResult {
 	margin: 0.6em;
 	font-size: 2.6rem;
 	line-height: 1.5;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
 }
 
 span.promptVariable {

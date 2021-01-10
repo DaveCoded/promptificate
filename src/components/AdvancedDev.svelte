@@ -7,6 +7,19 @@
     $: challenge = prompts && prompts[2].result;
 </script>
 
+<style>
+    .challenge {
+        margin: 0.6em;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .challenge span {
+        font-weight: 700;
+        color: #da295b;
+    }
+</style>
+
 <div class="promptResultWrapper">
     <p class="promptResult">
         Create
@@ -14,5 +27,5 @@
         inspired by
         <span class="promptVariable">{inspirator}</span>
     </p>
-    <p>{challenge}</p>
+    <p class="challenge">Challenge: <span>{challenge}</span></p>
 </div>
