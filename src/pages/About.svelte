@@ -1,5 +1,7 @@
 <script lang="ts">
     import Navbar from "../components/Navbar.svelte";
+    import Github from "../components/Github.svelte";
+    import Svelte from "../components/Svelte.svelte";
 </script>
 
 <style>
@@ -55,3 +57,4 @@
     We bear no legal responsibility for your bad drawings in response to our
     potentially offensive prompts.
 </p>
+<p class="subtext"><Github /></p>
