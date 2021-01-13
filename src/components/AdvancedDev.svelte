@@ -1,11 +1,36 @@
 <script lang="ts">
-    import type { FixedPrompt } from "../types/types";
-    export let prompts: FixedPrompt[];
+    import Padlock from './Padlock.svelte';
+    export let prompts: any[];
+    export let lockPrompt: () => void;
+    export let lockChallenge: () => void;
 
-    $: component = prompts && prompts[0].result;
-    $: inspirator = prompts && prompts[1].result;
-    $: challenge = prompts && prompts[2].result;
+    $: component = prompts && prompts[0].uiComponent;
+    $: inspirator = prompts && prompts[0].inspirator;
+    $: promptLocked = prompts && prompts[0].isLocked;
+
+    $: challenge = prompts && prompts[1].challenge;
+    $: challengeLocked = prompts && prompts[1].isLocked;
+    $: console.log('prompts', prompts);
 </script>
+
+<div class="promptResultWrapper">
+    <p class="promptResult">
+        Create
+        <span class="promptVariable">{component}</span>
+        inspired by
+        <span class="promptVariable">{inspirator}</span>
+        <button on:click={lockPrompt} class="padlock-button">
+            <Padlock width={14} isLocked={promptLocked} />
+        </button>
+    </p>
+    <p class="challenge">
+        Challenge:
+        <span>{challenge}</span>
+        <button on:click={lockChallenge} class="padlock-button">
+            <Padlock width={14} isLocked={challengeLocked} />
+        </button>
+    </p>
+</div>
 
 <style>
     .challenge {
@@ -19,13 +44,3 @@
         color: #da295b;
     }
 </style>
-
-<div class="promptResultWrapper">
-    <p class="promptResult">
-        Create
-        <span class="promptVariable">{component}</span>
-        inspired by
-        <span class="promptVariable">{inspirator}</span>
-    </p>
-    <p class="challenge">Challenge: <span>{challenge}</span></p>
-</div>

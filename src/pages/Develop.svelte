@@ -1,26 +1,38 @@
 <script lang="ts">
-    import Navbar from "../components/Navbar.svelte";
-    import Toggle from "../components/Toggle.svelte";
-    import ClassicDev from "../components/ClassicDev.svelte";
-    import AdvancedDev from "../components/AdvancedDev.svelte";
-    import {
-        generateDevAdvanced,
-        generateDevClassic,
-    } from "../helpers/generateFunctions";
+    import Navbar from '../components/Navbar.svelte';
+    import Toggle from '../components/Toggle.svelte';
+    import ClassicDev from '../components/ClassicDev.svelte';
+    import AdvancedDev from '../components/AdvancedDev.svelte';
+    import { generateDevAdvanced, generateDevClassic } from '../helpers/generateFunctions';
 
-    import type { FixedPrompt, Mode } from "../types/types";
-    let mode: Mode = "classic";
+    import type { FixedPrompt, Mode } from '../types/types';
+    let mode: Mode = 'classic';
     const switchMode = (newMode: Mode) => (mode = newMode);
 
     let classicPrompts: FixedPrompt[] = generateDevClassic();
-    let advancedPrompts: FixedPrompt[] = generateDevAdvanced();
     let generate: () => void;
 
-    $: if (mode === "classic") {
+    let advancedPrompts: any[] = [
+        {
+            uiComponent: '',
+            inspirator: '',
+            isLocked: false
+        },
+        {
+            challenge: '',
+            isLocked: false
+        }
+    ];
+    advancedPrompts = generateDevAdvanced(advancedPrompts);
+
+    $: if (mode === 'classic') {
         generate = () => (classicPrompts = generateDevClassic());
-    } else if (mode === "advanced") {
-        generate = () => (advancedPrompts = generateDevAdvanced());
+    } else if (mode === 'advanced') {
+        generate = () => (advancedPrompts = generateDevAdvanced(advancedPrompts));
     }
+
+    const lockPrompt = () => (advancedPrompts[0].isLocked = !advancedPrompts[0].isLocked);
+    const lockChallenge = () => (advancedPrompts[1].isLocked = !advancedPrompts[1].isLocked);
 </script>
 
 <Navbar />
@@ -30,7 +42,7 @@
     {#if mode === 'classic'}
         <ClassicDev prompts={classicPrompts} />
     {:else}
-        <AdvancedDev prompts={advancedPrompts} />
+        <AdvancedDev prompts={advancedPrompts} {lockPrompt} {lockChallenge} />
     {/if}
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>

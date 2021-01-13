@@ -39,18 +39,15 @@ export const generateDevClassic = () => [
     }
 ];
 
-export const generateDevAdvanced = () => [
+export const generateDevAdvanced = (promptsArray: any[]) => [
     {
-        category: "uiComponent",
-        result: getRandomResult("uiComponent", devPromptsData)
+        uiComponent: promptsArray[0].isLocked ? promptsArray[0].uiComponent : getRandomResult("uiComponent", devPromptsData),
+        inspirator: promptsArray[0].isLocked ? promptsArray[0].inspirator : getRandomResult("inspirator", devPromptsData),
+        isLocked: promptsArray[0].isLocked
     },
     {
-        category: "inspirator",
-        result: getRandomResult("inspirator", devPromptsData)
-    },
-    {
-        category: "challenge",
-        result: getRandomResult("challenge", devPromptsData)
+        challenge: promptsArray[1].isLocked ? promptsArray[1].challenge : getRandomResult("challenge", devPromptsData),
+        isLocked: promptsArray[1].isLocked
     }
 ];
 
