@@ -43,4 +43,7 @@
         font-weight: 700;
         color: #da295b;
     }
+    .padlock-button {
+        padding: 0;
+    }
 </style>
