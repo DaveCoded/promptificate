@@ -45,7 +45,6 @@
 
 <nav>
     <Logo />
-    <a href="/" class:activeNav={path.endsWith('/')}>Home</a>
     <a href="/draw" class:activeNav={path.endsWith('/draw')}>Draw</a>
     <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a>
     <a href="/about" class:activeNav={path.endsWith('/about')}>About</a>
