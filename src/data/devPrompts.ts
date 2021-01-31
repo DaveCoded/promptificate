@@ -20,7 +20,7 @@ export let devPromptsData: DevPromptsData = {
         "a testimonial quote",
         "a like button",
         "a save for later button",
-        "a progres bar",
+        "a progress bar",
         "a loading animation",
         "a search bar",
         "some radio buttons",
@@ -62,8 +62,9 @@ export let devPromptsData: DevPromptsData = {
         "rich uncle Pennybags"
     ],
     designConstraint: [
-        "thing",
-        "other thing",
-        "another thing"
+        "optimise it for 320px-wide screens",
+        "make it in under 13 minutes",
+        "use jQuery",
+        "make it accessible to people with red-green colour blindness",
     ]
 };
