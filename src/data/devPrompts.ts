@@ -65,6 +65,9 @@ export let devPromptsData: DevPromptsData = {
         "optimise it for 320px-wide screens",
         "make it in under 13 minutes",
         "use jQuery",
-        "make it accessible to people with red-green colour blindness",
+        "make it accessible to people with red/green colour blindness",
+        "build it in Vue",
+        "build it in Angular",
+        "include a loading state for async dat requests",
     ]
 };
