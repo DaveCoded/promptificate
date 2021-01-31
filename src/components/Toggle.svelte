@@ -38,6 +38,10 @@
         transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
     }
 
+    :global(.darkWrapper) button {
+        color: #a386f4;
+    }
+
     .active {
         color: white;
         background: linear-gradient(0deg, #2e58f0, #3195ff);

@@ -35,7 +35,7 @@
     const lockChallenge = () => (advancedPrompts[1].isLocked = !advancedPrompts[1].isLocked);
 </script>
 
-<div class="darkWrapper">
+<div class="darkWrapper" >
 
 <Navbar />
 
