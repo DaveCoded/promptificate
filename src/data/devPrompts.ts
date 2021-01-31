@@ -18,7 +18,12 @@ export let devPromptsData: DevPromptsData = {
         "a newsletter signup",
         "a testimonial quote",
         "a like button",
-        "a save for later button"
+        "a save for later button",
+        "a progres bar",
+        "a loading animation",
+        "a search bar",
+        "some radio buttons",
+        "a toggle button",
     ],
     inspirator: [
         "The Muppets",
