@@ -10,7 +10,6 @@
 
     $: designConstraint = prompts && prompts[1].designConstraint;
     $: constraintLocked = prompts && prompts[1].isLocked;
-    $: console.log('prompts', prompts);
 </script>
 
 <div class="promptResultWrapper">
