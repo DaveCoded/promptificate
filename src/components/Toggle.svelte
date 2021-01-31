@@ -21,6 +21,17 @@
         background: linear-gradient(180deg, #f5f4f6, #fcfbfc);
     }
 
+    :global(.darkWrapper) .container {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        padding: 0px 4px;
+        margin: 1em auto;
+        border-radius: 30px;
+        border: 1px solid #140b22;
+        background: black;
+    }
+
     button {
         padding: 0.8em 1em;
         border-radius: 30px;

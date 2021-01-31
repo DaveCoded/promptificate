@@ -35,6 +35,8 @@
     const lockChallenge = () => (advancedPrompts[1].isLocked = !advancedPrompts[1].isLocked);
 </script>
 
+<div class="darkWrapper">
+
 <Navbar />
 
 <div class="generator-container">
@@ -46,3 +48,14 @@
     {/if}
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>
+
+</div>
+
+<style>
+    .darkWrapper {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        background: black;
+    }
+</style>

@@ -8,7 +8,7 @@
         display: flex;
         flex-direction: row;
         justify-content: left;
-        padding-bottom: 1em;
+	    padding: 1.6em;
     }
 
     nav a {
