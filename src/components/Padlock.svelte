@@ -1,7 +1,14 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
+    let isDarkMode: boolean = false
+    onMount(() => {
+        isDarkMode = !!document.querySelector('.darkWrapper');
+    });
+    $: openColor = isDarkMode ? '#5E7C9B' : "#989CBB"
+    $: lockedColor = isDarkMode ? '#7559D6' : "#878CB0"
+
     export let width: number = 14;
-    export let openColor: string = '#989CBB';
-    export let lockedColor: string = '#878CB0';
     export let isLocked: boolean = false;
 </script>
 

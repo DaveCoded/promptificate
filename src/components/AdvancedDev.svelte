@@ -22,7 +22,7 @@
             <Padlock width={14} isLocked={promptLocked} />
         </button>
         and
-        <span>{designConstraint}</span>
+        <span class="promptVariable">{designConstraint}</span>
         <button on:click={lockConstraint} class="padlock-button">
             <Padlock width={14} isLocked={constraintLocked} />
         </button>
