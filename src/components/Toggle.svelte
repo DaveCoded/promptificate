@@ -28,8 +28,8 @@
         padding: 0px 4px;
         margin: 1em auto;
         border-radius: 30px;
-        border: 1px solid #140b22;
-        background: black;
+        border: 1px solid #1c1e32;
+        background: linear-gradient(0deg, #23253B, #1b1d32);
     }
 
     button {
@@ -41,6 +41,11 @@
     .active {
         color: white;
         background: linear-gradient(0deg, #2e58f0, #3195ff);
+    }
+
+    :global(.darkWrapper) .active {
+        color: white;
+        background: linear-gradient(180deg, #8f6ae6, #5e49c7);
     }
 
     @media (max-width: 724px) {

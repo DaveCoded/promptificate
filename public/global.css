@@ -90,6 +90,7 @@ p.placeholderText {
 	bottom: -4em;
 }
 
+
 p.promptResult {
 	margin: 0.6em;
 	font-size: 2.6rem;
@@ -99,6 +100,11 @@ p.promptResult {
 span.promptVariable {
     color: rgb(35, 122, 228);
     font-weight: 700;
+}
+
+.darkWrapper span.promptVariable {
+	color: #b3d75f;
+	font-weight: 700;
 }
 
 @media (max-width: 724px) {
@@ -157,6 +163,11 @@ button {
 	transition: all 0.3s ease-in-out;
 }
 
+.darkWrapper .promptButton {
+	background: linear-gradient(180deg, #8f6ae6, #5e49c7);
+	color: #fcfcfc;
+}
+
 @media (max-width: 724px) {
 	.promptButton {
 		font-size: 1em;
@@ -183,12 +194,17 @@ a {
 	text-decoration: none;
 }
 
+.darkWrapper a {
+	color: #52beed;
+}
+
 a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
-	color: #da295b;
+.darkWrapper a:hover {
+	text-decoration: underline;
+	color: #a684fc;
 }
 
 

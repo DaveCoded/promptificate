@@ -1,4 +1,7 @@
 <script>
+    const isDarkMode = document.querySelector(".darkWrapper");
+    console.log(isDarkMode);
+
     let fillcolour = "#EA215B"
 </script>
 

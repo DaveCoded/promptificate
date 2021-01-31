@@ -56,6 +56,7 @@
         width: 100%;
         height: 100vh;
         margin: 0;
-        background: black;
+        background: linear-gradient(180deg, #2b2e43, #111329);
+        color: #5e7d9b;
     }
 </style>
