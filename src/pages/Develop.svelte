@@ -19,7 +19,7 @@
             isLocked: false
         },
         {
-            challenge: '',
+            designConstraint: '',
             isLocked: false
         }
     ];
@@ -32,7 +32,7 @@
     }
 
     const lockPrompt = () => (advancedPrompts[0].isLocked = !advancedPrompts[0].isLocked);
-    const lockChallenge = () => (advancedPrompts[1].isLocked = !advancedPrompts[1].isLocked);
+    const lockConstraint = () => (advancedPrompts[1].isLocked = !advancedPrompts[1].isLocked);
 </script>
 
 <div class="darkWrapper">
@@ -44,7 +44,7 @@
     {#if mode === 'classic'}
         <ClassicDev prompts={classicPrompts} />
     {:else}
-        <AdvancedDev prompts={advancedPrompts} {lockPrompt} {lockChallenge} />
+        <AdvancedDev prompts={advancedPrompts} {lockPrompt} {lockConstraint} />
     {/if}
     <button class="promptButton" on:click={generate}>Prompt Me!</button>
 </div>

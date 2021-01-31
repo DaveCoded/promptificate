@@ -46,7 +46,7 @@ export const generateDevAdvanced = (promptsArray: any[]) => [
         isLocked: promptsArray[0].isLocked
     },
     {
-        challenge: promptsArray[1].isLocked ? promptsArray[1].challenge : getRandomResult("challenge", devPromptsData),
+        designConstraint: promptsArray[1].isLocked ? promptsArray[1].designConstraint : getRandomResult("designConstraint", devPromptsData),
         isLocked: promptsArray[1].isLocked
     }
 ];

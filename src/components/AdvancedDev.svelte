@@ -2,14 +2,14 @@
     import Padlock from './Padlock.svelte';
     export let prompts: any[];
     export let lockPrompt: () => void;
-    export let lockChallenge: () => void;
+    export let lockConstraint: () => void;
 
     $: component = prompts && prompts[0].uiComponent;
     $: inspirator = prompts && prompts[0].inspirator;
     $: promptLocked = prompts && prompts[0].isLocked;
 
-    $: challenge = prompts && prompts[1].challenge;
-    $: challengeLocked = prompts && prompts[1].isLocked;
+    $: designConstraint = prompts && prompts[1].designConstraint;
+    $: constraintLocked = prompts && prompts[1].isLocked;
     $: console.log('prompts', prompts);
 </script>
 
@@ -23,9 +23,9 @@
             <Padlock width={14} isLocked={promptLocked} />
         </button>
         and
-        <span>{challenge}</span>
-        <button on:click={lockChallenge} class="padlock-button">
-            <Padlock width={14} isLocked={challengeLocked} />
+        <span>{designConstraint}</span>
+        <button on:click={lockConstraint} class="padlock-button">
+            <Padlock width={14} isLocked={constraintLocked} />
         </button>
     </p>
 </div>

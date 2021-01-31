@@ -5,6 +5,7 @@ interface PromptKeys {
 interface DevPromptsData extends PromptKeys {
     uiComponent: string[];
     inspirator: string[];
+    designConstraint: string[];
 }
 
 export let devPromptsData: DevPromptsData = {
@@ -60,10 +61,9 @@ export let devPromptsData: DevPromptsData = {
         "a magical genie lamp",
         "rich uncle Pennybags"
     ],
-    challenge: [
-        "Do it well",
-        "Don't mess it up",
-        "Try not to suck",
-        "Use 50 shades of grey"
+    designConstraint: [
+        "thing",
+        "other thing",
+        "another thing"
     ]
 };
