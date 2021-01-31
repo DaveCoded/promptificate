@@ -8,7 +8,7 @@
         display: flex;
         flex-direction: row;
         justify-content: left;
-        padding-bottom: 1em;
+	    padding: 1.6em;
     }
 
     nav a {
@@ -24,6 +24,10 @@
         text-underline-offset: 6px;
         opacity: 100%;
     }
+
+    .darkWrapper nav a:hover {
+        text-decoration-color: #a684fc;
+    }
     .activeNav {
         font-weight: 800;
         text-decoration: underline;
@@ -32,6 +36,10 @@
         text-underline-offset: 4px;
         opacity: 100%;
         transition: all 600ms;
+    }
+
+    :global(.darkWrapper) .activeNav {
+        text-decoration-color: #319bc9;
     }
 </style>
 

@@ -22,9 +22,7 @@
         <button on:click={lockPrompt} class="padlock-button">
             <Padlock width={14} isLocked={promptLocked} />
         </button>
-    </p>
-    <p class="challenge">
-        Challenge:
+        and
         <span>{challenge}</span>
         <button on:click={lockChallenge} class="padlock-button">
             <Padlock width={14} isLocked={challengeLocked} />
@@ -33,16 +31,6 @@
 </div>
 
 <style>
-    .challenge {
-        margin: 0.6em;
-        font-size: 2rem;
-        line-height: 1.5;
-    }
-
-    .challenge span {
-        font-weight: 700;
-        color: #da295b;
-    }
     .padlock-button {
         padding: 0;
     }
