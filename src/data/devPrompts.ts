@@ -23,8 +23,9 @@ export let devPromptsData: DevPromptsData = {
         "a progress bar",
         "a loading animation",
         "a search bar",
-        "some radio buttons",
+        "a set of radio buttons",
         "a toggle button",
+        "a form submission error message",
     ],
     inspirator: [
         "The Muppets",
@@ -65,9 +66,10 @@ export let devPromptsData: DevPromptsData = {
         "optimise it for 320px-wide screens",
         "make it in under 13 minutes",
         "use jQuery",
-        "make it accessible to people with red/green colour blindness",
+        "make it accessible to colour blind people",
         "build it in Vue",
         "build it in Angular",
         "include a loading state",
+        "only use monochrome colours"
     ]
 };
