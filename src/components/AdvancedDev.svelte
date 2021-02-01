@@ -19,12 +19,12 @@
         inspired by
         <span class="promptVariable">{inspirator}</span>
         <button on:click={lockPrompt} class="padlock-button">
-            <Padlock width={14} isLocked={promptLocked} />
+            <Padlock width={16} isLocked={promptLocked} />
         </button>
         and
         <span class="promptVariable">{designConstraint}</span>
         <button on:click={lockConstraint} class="padlock-button">
-            <Padlock width={14} isLocked={constraintLocked} />
+            <Padlock width={16} isLocked={constraintLocked} />
         </button>
     </p>
 </div>
@@ -32,5 +32,8 @@
 <style>
     .padlock-button {
         padding: 0;
+        padding-right: 5px;
+        position: relative;
+        top: -12px;
     }
 </style>
