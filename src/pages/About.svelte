@@ -6,7 +6,7 @@
     p {
         font-size: 1.2em;
         line-height: 1.6;
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto;
         margin: 1em auto;
     }
@@ -38,11 +38,7 @@
 
 <h1>This is a website</h1>
 
-<p>It will provide you with innovative, synergistic, and potentially economically disruptive prompts.</p>
-    
-
-<p>
-    You have two options – <a href="/draw">Draw</a> or <a href="/develop">Develop</a>.
+<p>It will provide you with innovative, synergistic, and potentially economically disruptive prompts. You may either <a href="/draw">Draw</a> or <a href="/develop">Develop</a>.
 </p>
     <p>Draw will help you turn silly objects into metaphors for pretentious abstract concepts using a particular visual style. Develop will help you build interface elements inspired by nonsensical memes within a set of design constraints.</p>
 <p>You may wish to take all of this seriously. Maybe don't.</p>
