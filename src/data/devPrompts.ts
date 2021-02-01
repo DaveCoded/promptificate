@@ -70,6 +70,7 @@ export let devPromptsData: DevPromptsData = {
         "build it in Vue",
         "build it in Angular",
         "include a loading state",
-        "only use monochrome colours"
+        "only use monochrome colours",
+        "use Tailwinds",
     ]
 };
