@@ -38,12 +38,14 @@
 
 <h1>This is a website</h1>
 
+<p>It will provide you with innovative, synergistic, and potentially economically disruptive prompts.</p>
+    
+
 <p>
-    It will prompt you to draw silly things as metaphors for abstract concepts.
-    If you're feeling advanced, you can draw those things in particular visual
-    styles.
+    You have two options – <a href="/draw">Draw</a> or <a href="/develop">Develop</a>.
 </p>
-<p>You may wish to take it seriously. Maybe don't.</p>
+    <p>Draw will help you turn silly objects into metaphors for pretentious abstract concepts using a particular visual style. Develop will help you build interface elements inspired by nonsensical memes within a set of design constraints.</p>
+<p>You may wish to take all of this seriously. Maybe don't.</p>
 <hr />
 <p>
     Made by
@@ -52,6 +54,6 @@
     <a href="http://maggieappleton.com/">Maggie Appleton</a>.
 </p>
 <p class="subtext">
-    We bear no legal responsibility for your bad drawings in response to our
+    We bear no legal responsibility for your bad drawings or creations in response to our
     potentially offensive prompts.
 </p>
