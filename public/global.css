@@ -37,7 +37,6 @@ html, body {
 
 body {
 	text-align: center;
-	padding: 1.6em;
 	box-sizing: border-box;
 	font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -74,8 +73,8 @@ div.promptResultWrapper {
 	min-height: 236px;
 	max-height: 100%;
 	display: flex;
-	align-items: center;
-	margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 724px) {
@@ -91,17 +90,21 @@ p.placeholderText {
 	bottom: -4em;
 }
 
+
 p.promptResult {
 	margin: 0.6em;
 	font-size: 2.6rem;
 	line-height: 1.5;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
 }
 
 span.promptVariable {
     color: rgb(35, 122, 228);
     font-weight: 700;
+}
+
+.darkWrapper span.promptVariable {
+	color: #b3d75f;
+	font-weight: 700;
 }
 
 @media (max-width: 724px) {
@@ -143,10 +146,6 @@ button {
     cursor: pointer;
 }
 
-button:focus {
-	outline: none;
-}
-
 .promptButton {
 	color: rgb(247, 247, 243);
 	background: linear-gradient(180deg, #2e82ff, #1762e4);
@@ -162,6 +161,11 @@ button:focus {
     0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
 	0 25px 20px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out;
+}
+
+.darkWrapper .promptButton {
+	background: linear-gradient(180deg, #8f6ae6, #5e49c7);
+	color: #fcfcfc;
 }
 
 @media (max-width: 724px) {
@@ -185,21 +189,22 @@ button:focus {
     0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.promptButton:focus {
-	outline: none;
-}
-
 a {
 	color: #F6386F;
 	text-decoration: none;
+}
+
+.darkWrapper a {
+	color: #52beed;
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
-	color: #da295b;
+.darkWrapper a:hover {
+	text-decoration: underline;
+	color: #a684fc;
 }
 
 

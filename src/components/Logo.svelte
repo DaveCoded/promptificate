@@ -1,5 +1,11 @@
-<script>
-    let fillcolour = "#EA215B"
+<script lang="ts">
+    import { onMount } from 'svelte';
+
+    let isDarkMode: boolean = false
+    onMount(() => {
+        isDarkMode = !!document.querySelector('.darkWrapper');
+    });
+    $: fillcolour = isDarkMode ? '#53BFED' : "#EA215B"
 </script>
 
 <style>

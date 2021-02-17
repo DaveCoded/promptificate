@@ -1,31 +1,33 @@
 <script lang="ts">
     let path = window.location.href;
-    import Logo from "./Logo.svelte"
+    import Logo from "./Logo.svelte";
 </script>
 
 <style>
     nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	padding-bottom: 1em;
-}
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+	    padding: 1.6em;
+    }
 
-nav a {
-	padding: 0 10px;
-	opacity: 75%;
-	transition: all 600ms;
-}
+    nav a {
+        padding: 0 10px;
+        opacity: 75%;
+        transition: all 600ms;
+    }
 
-nav a:hover {
-	font-weight: 700;
-	text-decoration: underline;
-	text-decoration-color: #f8b3c7;
-	text-decoration-thickness: .12em;
-	text-underline-offset: 6px;
-	transition: all 600ms;
-	opacity: 100%;
-}
+    nav a:hover {
+        text-decoration: underline;
+        text-decoration-color: #f8b3c7;
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 6px;
+        opacity: 100%;
+    }
+
+    .darkWrapper nav a:hover {
+        text-decoration-color: #a684fc;
+    }
     .activeNav {
         font-weight: 800;
         text-decoration: underline;
@@ -35,12 +37,15 @@ nav a:hover {
         opacity: 100%;
         transition: all 600ms;
     }
+
+    :global(.darkWrapper) .activeNav {
+        text-decoration-color: #319bc9;
+    }
 </style>
 
 <nav>
     <Logo />
-        <!-- <a href="/" class:activeNav={path.endsWith('/')}>Home</a> -->
-        <!-- <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a> -->
-        <a href="/" class:activeNav={path.endsWith('/')}>Draw</a>
-        <a href="/about" class:activeNav={path.endsWith('/about')}>About</a> 
+    <a href="/draw" class:activeNav={path.endsWith('/draw')}>Draw</a>
+    <a href="/develop" class:activeNav={path.endsWith('/develop')}>Develop</a>
+    <a href="/about" class:activeNav={path.endsWith('/about')}>About</a>
 </nav>

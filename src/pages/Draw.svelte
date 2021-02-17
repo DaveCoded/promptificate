@@ -75,7 +75,10 @@
 <Navbar />
 
 <div class="generator-container">
-    <Toggle currentMode={mode} {switchMode} />
+    <Toggle
+        modes={['classic', 'advanced', 'freestyle']}
+        currentMode={mode}
+        {switchMode} />
 
     {#if mode === 'classic'}
         <Classic prompts={classicPrompts} />

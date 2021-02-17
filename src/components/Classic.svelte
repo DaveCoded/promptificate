@@ -7,14 +7,10 @@
 </script>
 
 <div class="promptResultWrapper">
-    {#if !prompts}
-        <p class="placeholderText">Perhaps you'd like to click the button?</p>
-    {:else}
-        <p class="promptResult">
-            Draw
-            <span class="promptVariable">{object}</span>
-            to illustrate
-            <span class="promptVariable">{concept}</span>
-        </p>
-    {/if}
+    <p class="promptResult">
+        Draw
+        <span class="promptVariable">{object}</span>
+        to illustrate
+        <span class="promptVariable">{concept}</span>
+    </p>
 </div>
